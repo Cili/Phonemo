@@ -54,10 +54,12 @@
 
     <TableLayout
         android:id="@+id/PhonemeKeyboard"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_width="603dp"
+        android:layout_height="700dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
         <TableRow
@@ -68,19 +70,19 @@
             <Button
                 android:id="@+id/button6"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:text="Button" />
         </TableRow>
 
         <TableRow
             android:id="@+id/RowTwo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/button7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:text="Button" />
         </TableRow>
 
@@ -92,7 +94,7 @@
             <Button
                 android:id="@+id/button8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:text="Button" />
         </TableRow>
 
@@ -104,7 +106,7 @@
             <Button
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:text="Button" />
         </TableRow>
 
@@ -116,7 +118,7 @@
             <Button
                 android:id="@+id/button10"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:text="Button" />
         </TableRow>
 
@@ -128,7 +130,7 @@
             <Button
                 android:id="@+id/button11"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:text="Button" />
         </TableRow>
 
@@ -140,7 +142,7 @@
             <Button
                 android:id="@+id/button12"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:text="Button" />
         </TableRow>
     </TableLayout>
