@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Phonemo</string>
     <string name="myName">Ashley</string>
+    <string name="AppTitleStr">Phonema</string>
 </resources>
