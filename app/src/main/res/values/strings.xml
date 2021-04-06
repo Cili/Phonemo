@@ -2,4 +2,8 @@
     <string name="app_name">Phonemo</string>
     <string name="myName">Ashley</string>
     <string name="AppTitleStr">Phonema</string>
+    <string name="DoneButtonStr">Done</string>
+    <string name="WordCreateStr">Create</string>
+    <string name="SocialMediaStr">Social Media</string>
+    <string name="PersonalLibraryStr">Library</string>
 </resources>
