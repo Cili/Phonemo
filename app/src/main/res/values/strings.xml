@@ -6,4 +6,10 @@
     <string name="WordCreateStr">Create</string>
     <string name="SocialMediaStr">Social Media</string>
     <string name="PersonalLibraryStr">Library</string>
+    <string name="LeftArrowStr">Left arrow to move cursor</string>
+    <string name="RightArrowStr">Right arrow to move cursor</string>
+    <string name="BackspaceButtonStr">Backspace</string>
+    <string name="AddButtonStr">"Add a phoneme "</string>
+    <string name="SpeakerButtonStr">Sounds out phoneme combinations</string>
+    <string name="BButtonStr"> b bug</string>
 </resources>
