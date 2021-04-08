@@ -11,6 +11,8 @@
     <string name="BackspaceButtonStr">Backspace</string>
     <string name="AddButtonStr">"Add a phoneme "</string>
     <string name="SpeakerButtonStr">Sounds out phoneme combinations</string>
+
+    <!-- Phonemic Strings -->
     <string name="bButtonStr">b<br>BUG</br></string>
     <string name="dButtonStr">d<br>ADD</br></string>
     <string name="fButtonStr">f<br>FAR</br></string>
@@ -29,4 +31,7 @@
     <string name="wButtonStr">w<br>WIT</br></string>
     <string name="zButtonStr">z<br>BUZZ</br></string>
     <string name="ʒButtonStr">ʒ<br>USUAL</br></string>
+
+    <!-- Other Strings -->
+    <string name="startButtonStr">START</string>
 </resources>
