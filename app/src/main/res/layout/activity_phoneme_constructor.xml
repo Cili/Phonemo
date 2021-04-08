@@ -24,7 +24,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/capriola"
-            android:stye
             android:text="@string/WordCreateStr" />
 
         <Button
