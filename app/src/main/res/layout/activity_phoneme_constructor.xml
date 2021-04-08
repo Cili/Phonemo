@@ -19,15 +19,17 @@
 
         <Button
             android:id="@+id/WordCreationApp"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/capriola"
-            android:text="@string/WordCreateStr"
-            android:stye/>
+            android:stye
+            android:text="@string/WordCreateStr" />
 
         <Button
             android:id="@+id/SocialMediaTab"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -36,6 +38,7 @@
 
         <Button
             android:id="@+id/PersonalLibraryTab"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -74,6 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/LeftArrowStr"
                 app:srcCompat="@drawable/abc_vector_test" />
@@ -83,15 +87,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/RightArrowStr"
                 app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
 
             <Button
                 android:id="@+id/PhonemeB"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
@@ -100,9 +107,11 @@
 
             <Button
                 android:id="@+id/PhonemeD"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
@@ -111,9 +120,11 @@
 
             <Button
                 android:id="@+id/PhonemeF"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/fButtonStr"
@@ -121,9 +132,11 @@
 
             <Button
                 android:id="@+id/PhonemeG"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/gButtonStr"
@@ -134,6 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/BackspaceButtonStr"
                 app:srcCompat="@drawable/ic_baseline_backspace_24" />
@@ -147,27 +161,34 @@
 
             <Button
                 android:id="@+id/PhonemeH"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/hButtonStr"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/PhonemeD3"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/d3ButtonStr"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/PhonemeK"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
                 android:text="@string/kButtonStr"
@@ -175,9 +196,11 @@
 
             <Button
                 android:id="@+id/PhonemeL"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/lButtonStr"
@@ -185,27 +208,33 @@
 
             <Button
                 android:id="@+id/PhonemeM"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/mButtonStr"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/PhonemeN"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/nButtonStr"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/PhonemeP"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/pButtonStr"
@@ -219,27 +248,33 @@
 
             <Button
                 android:id="@+id/PhonemeR"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/rButtonStr"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/PhonemeS"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/sButtonStr"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/PhonemeT"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
                 android:text="@string/tButtonStr"
@@ -247,9 +282,11 @@
 
             <Button
                 android:id="@+id/PhonemeV"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/vButtonStr"
@@ -257,30 +294,37 @@
 
             <Button
                 android:id="@+id/PhonemeW"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/wButtonStr"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/PhonemeZ"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/zButtonStr"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/Phonemeʒ"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:text="@string/ʒButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textSize="14sp" />
         </TableRow>
 
         <TableRow
@@ -289,68 +333,82 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/PhonemeTʃ"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:text="Button"
+                android:text="@string/tʃButtonStr"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button24"
+                android:id="@+id/Phonemeʃ"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:text="Button"
+                android:text="@string/ʃButtonStr"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button25"
+                android:id="@+id/Phonemeθ"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
-                android:text="Button"
+                android:text="@string/θButtonStr"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button26"
+                android:id="@+id/Phonemeð"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
-                android:text="Button"
+                android:text="@string/ðButtonStr"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button27"
+                android:id="@+id/Phonemeŋ"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:text="Button"
+                android:text="@string/ŋButtonStr"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button28"
+                android:id="@+id/PhonemeJ"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:text="Button"
+                android:text="@string/jButtonStr"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button29"
+                android:id="@+id/Phonemeæ"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:text="Button"
+                android:text="@string/æButtonStr"
                 android:textAllCaps="false" />
         </TableRow>
 
@@ -361,59 +419,80 @@
 
             <Button
                 android:id="@+id/button10"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button30"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button31"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button32"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button33"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button34"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button35"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola"
                 android:text="Button"
                 android:textAllCaps="false" />
         </TableRow>
@@ -425,59 +504,73 @@
 
             <Button
                 android:id="@+id/button11"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button36"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button37"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:outlineProvider="background"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button38"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:outlineProvider="paddedBounds"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button39"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button40"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button41"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:text="Button"
                 android:textAllCaps="false" />
         </TableRow>
@@ -492,49 +585,60 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/AddButtonStr"
                 app:srcCompat="@drawable/ic_baseline_control_point_24" />
 
             <Button
                 android:id="@+id/button12"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button42"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:outlineProvider="background"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button43"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:outlineProvider="paddedBounds"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button44"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:text="Button"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button45"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:background="@color/phonemared"
                 android:text="Button"
                 android:textAllCaps="false" />
 
@@ -542,6 +646,7 @@
                 android:id="@+id/SpeakerButton"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/SpeakerButtonStr"
                 app:srcCompat="@drawable/ic_baseline_campaign_24" />
