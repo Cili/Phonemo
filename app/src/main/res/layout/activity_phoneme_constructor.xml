@@ -23,7 +23,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/capriola"
-            android:text="@string/WordCreateStr" />
+            android:text="@string/WordCreateStr"
+            android:stye/>
 
         <Button
             android:id="@+id/SocialMediaTab"
@@ -83,6 +84,7 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/phonemared"
+                android:contentDescription="@string/RightArrowStr"
                 app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
 
             <Button
@@ -93,35 +95,39 @@
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
-                android:text="@string/BButtonStr" />
+                android:text="@string/bButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/PhonemeD"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
-                android:text="Button" />
+                android:text="@string/dButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/PhonemeF"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:text="Button" />
+                android:text="@string/fButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/PhonemeG"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:text="Button" />
+                android:text="@string/gButtonStr"
+                android:textAllCaps="false" />
 
             <ImageButton
                 android:id="@+id/Backspace"
@@ -140,63 +146,70 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/PhonemeH"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/capriola"
-                android:text="Button" />
+                android:text="@string/hButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/PhonemeD3"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/capriola"
-                android:text="Button" />
+                android:text="@string/d3ButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/PhonemeK"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
-                android:text="Button" />
+                android:text="@string/kButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/PhonemeL"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
-                android:text="Button" />
+                android:text="@string/lButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/PhonemeM"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/capriola"
-                android:text="Button" />
+                android:text="@string/mButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/PhonemeN"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/capriola"
-                android:text="Button" />
+                android:text="@string/nButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button16"
+                android:id="@+id/PhonemeP"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:text="Button" />
+                android:text="@string/pButtonStr"
+                android:textAllCaps="false" />
         </TableRow>
 
         <TableRow
@@ -205,55 +218,69 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/PhonemeR"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="@string/rButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button18"
+                android:id="@+id/PhonemeS"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="@string/sButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button19"
+                android:id="@+id/PhonemeT"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
-                android:text="Button" />
+                android:text="@string/tButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button20"
+                android:id="@+id/PhonemeV"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
-                android:text="Button" />
+                android:text="@string/vButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/PhonemeW"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="@string/wButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button22"
+                android:id="@+id/PhonemeZ"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="@string/zButtonStr"
+                android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/button23"
+                android:id="@+id/Phonemeʒ"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="@string/ʒButtonStr"
+                android:textAllCaps="false" />
         </TableRow>
 
         <TableRow
@@ -266,51 +293,65 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button24"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button25"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/capriola"
                 android:outlineProvider="background"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button26"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/capriola"
                 android:outlineProvider="paddedBounds"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button27"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button28"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button29"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:fontFamily="@font/capriola"
+                android:text="Button"
+                android:textAllCaps="false" />
         </TableRow>
 
         <TableRow
@@ -323,14 +364,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button30"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button31"
@@ -338,7 +381,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:outlineProvider="background"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button32"
@@ -346,28 +390,32 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:outlineProvider="paddedBounds"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button33"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button34"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button35"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
         </TableRow>
 
         <TableRow
@@ -380,14 +428,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button36"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button37"
@@ -395,7 +445,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:outlineProvider="background"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button38"
@@ -403,28 +454,32 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:outlineProvider="paddedBounds"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button39"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button40"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button41"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
         </TableRow>
 
         <TableRow
@@ -446,7 +501,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button42"
@@ -454,7 +510,8 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:outlineProvider="background"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button43"
@@ -462,21 +519,24 @@
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:outlineProvider="paddedBounds"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button44"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button45"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Button"
+                android:textAllCaps="false" />
 
             <ImageButton
                 android:id="@+id/SpeakerButton"

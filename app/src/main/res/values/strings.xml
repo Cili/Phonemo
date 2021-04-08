@@ -11,5 +11,22 @@
     <string name="BackspaceButtonStr">Backspace</string>
     <string name="AddButtonStr">"Add a phoneme "</string>
     <string name="SpeakerButtonStr">Sounds out phoneme combinations</string>
-    <string name="BButtonStr"> b bug</string>
+    <string name="bButtonStr">b<br>BUG</br></string>
+    <string name="dButtonStr">d<br>ADD</br></string>
+    <string name="fButtonStr">f<br>FAR</br></string>
+    <string name="gButtonStr">g<br>EGG</br></string>
+    <string name="hButtonStr">h<br>HOP</br></string>
+    <string name="d3ButtonStr">dʒ<br>JAM</br></string>
+    <string name="kButtonStr">k<br>CAT</br></string>
+    <string name="lButtonStr">l<br>LIT</br></string>
+    <string name="mButtonStr">m<br>MAN</br></string>
+    <string name="nButtonStr">n<br>NET</br></string>
+    <string name="pButtonStr">p<br>PIN</br></string>
+    <string name="rButtonStr">r<br>RUN</br></string>
+    <string name="sButtonStr">s<br>SET</br></string>
+    <string name="tButtonStr">t<br>TIP</br></string>
+    <string name="vButtonStr">v<br>VINE</br></string>
+    <string name="wButtonStr">w<br>WIT</br></string>
+    <string name="zButtonStr">z<br>BUZZ</br></string>
+    <string name="ʒButtonStr">ʒ<br>USUAL</br></string>
 </resources>
