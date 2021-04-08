@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-public class StartActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +14,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button startButton = findViewById(R.id.startButton);
         startButton.setOnClickListener(v -> {
-            Intent constructorPage = new Intent(StartActivity.this, PhonemeConstructor.class);
+            Intent constructorPage = new Intent(MainActivity.this, PhonemeConstructor.class);
             startActivity(constructorPage);
         });
     }
