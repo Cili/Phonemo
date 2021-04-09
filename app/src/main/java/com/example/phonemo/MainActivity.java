@@ -15,9 +15,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * Starts the Word Creation Activity
+     * @param v Takes in click?
+     */
     public void onCreation(View v){
         Intent intent = new Intent(this, PhonemeConstructor.class);
         startActivity(intent);
-
     }
 }
