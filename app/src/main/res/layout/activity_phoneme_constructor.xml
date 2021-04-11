@@ -669,4 +669,19 @@
 
         </TableRow>
     </TableLayout>
+
+    <TextView
+        android:id="@+id/PhonemeDisplay"
+        android:layout_width="431dp"
+        android:layout_height="223dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/phonemared"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/PhonemeKeyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
