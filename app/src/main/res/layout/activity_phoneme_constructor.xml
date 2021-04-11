@@ -79,6 +79,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/LeftArrowStr"
+                android:onClick="leftArrowOnClick"
                 app:srcCompat="@drawable/abc_vector_test" />
 
             <ImageButton
@@ -89,6 +90,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/RightArrowStr"
+                android:onClick="rightArrowOnClick"
                 app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
 
             <Button
@@ -153,6 +155,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/BackspaceButtonStr"
+                android:onClick="backspaceOnClick"
                 app:srcCompat="@drawable/ic_baseline_backspace_24" />
 
         </TableRow>
