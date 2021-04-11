@@ -101,6 +101,7 @@
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:maxLines="2"
+                android:onClick="phonemeSingleOnClick"
                 android:outlineProvider="background"
                 android:text="@string/bButtonStr"
                 android:textAllCaps="false" />
@@ -342,6 +343,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
+                android:onClick="phonemeDoubleOnClick"
                 android:text="@string/tʃButtonStr"
                 android:textAllCaps="false" />
 
@@ -598,6 +600,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/AddButtonStr"
+                android:onClick="addButtonOnClick"
                 app:srcCompat="@drawable/ic_baseline_control_point_24" />
 
             <Button
@@ -643,6 +646,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
+                android:onClick="phonemeTripleOnClick"
                 android:text="@string/ɪəʳButtonStr"
                 android:textAllCaps="false" />
 
