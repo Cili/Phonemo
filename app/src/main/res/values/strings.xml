@@ -11,63 +11,63 @@
     <!--Keyboard Row One-->
     <string name="LeftArrowStr">Left arrow to move cursor</string>
     <string name="RightArrowStr">Right arrow to move cursor</string>
-    <string name="bButtonStr">b<br><b>B</b>UG</br></string>
-    <string name="dButtonStr">d<br>A<b>DD</b></br></string>
-    <string name="fButtonStr">f<br><b>F</b>AR</br></string>
-    <string name="gButtonStr">g<br>E<b>GG</b></br></string>
+    <string name="bButtonStr">b\n\<br><b>B</b>UG</br></string>
+    <string name="dButtonStr">d\n\<br>A<b>DD</b></br></string>
+    <string name="fButtonStr">f\n\<br><b>F</b>AR</br></string>
+    <string name="gButtonStr">g\n\<br>E<b>GG</b></br></string>
     <string name="BackspaceButtonStr">Backspace</string>
 
     <!--Keyboard Row Two-->
-    <string name="hButtonStr">h<br><b>H</b>OP</br></string>
-    <string name="d3ButtonStr">dʒ<br><b>J</b>AM</br></string>
-    <string name="kButtonStr">k<br><b>C</b>AT</br></string>
-    <string name="lButtonStr">l<br><b>L</b>IT</br></string>
-    <string name="mButtonStr">m<br><b>M</b>AN</br></string>
-    <string name="nButtonStr">n<br><b>N</b>ET</br></string>
-    <string name="pButtonStr">p<br><b>P</b>IN</br></string>
+    <string name="hButtonStr">h\n\<br><b>H</b>OP</br></string>
+    <string name="d3ButtonStr">dʒ\n\<br><b>J</b>AM</br></string>
+    <string name="kButtonStr">k\n\<br><b>C</b>AT</br></string>
+    <string name="lButtonStr">l\n\<br><b>L</b>IT</br></string>
+    <string name="mButtonStr">m\n\<br><b>M</b>AN</br></string>
+    <string name="nButtonStr">n\n\<br><b>N</b>ET</br></string>
+    <string name="pButtonStr">p\n\<br><b>P</b>IN</br></string>
 
     <!--Keyboard Row Three-->
-    <string name="rButtonStr">r<br><b>R</b>UN</br></string>
-    <string name="sButtonStr">s<br><b>S</b>ET</br></string>
-    <string name="tButtonStr">t<br><b>T</b>IP</br></string>
-    <string name="vButtonStr">v<br><b>V</b>INE</br></string>
-    <string name="wButtonStr">w<br><b>W</b>IT</br></string>
-    <string name="zButtonStr">z<br>BU<b>ZZ</b></br></string>
-    <string name="ʒButtonStr">ʒ<br>U<b>S</b>UAL</br></string>
+    <string name="rButtonStr">r\n\<br><b>R</b>UN</br></string>
+    <string name="sButtonStr">s\n\<br><b>S</b>ET</br></string>
+    <string name="tButtonStr">t\n\<br><b>T</b>IP</br></string>
+    <string name="vButtonStr">v\n\<br><b>V</b>INE</br></string>
+    <string name="wButtonStr">w\n\<br><b>W</b>IT</br></string>
+    <string name="zButtonStr">z\n\<br>BU<b>ZZ</b></br></string>
+    <string name="ʒButtonStr">ʒ\n\<br>U<b>S</b>UAL</br></string>
 
     <!--Keyboard Row Four-->
-    <string name="tʃButtonStr">tʃ<br><b>CH</b>IP</br></string>
-    <string name="ʃButtonStr">ʃ<br><b>S</b>URE</br></string>
-    <string name="θButtonStr">θ<br>WI<b>TH</b></br></string>
-    <string name="ðButtonStr">ð<br><b>TH</b>E</br></string>
-    <string name="ŋButtonStr">ŋ<br>RI<b>NG</b></br></string>
-    <string name="jButtonStr">j<br><b>Y</b>OU</br></string>
-    <string name="æButtonStr">æ<br>PL<b>AI</b>D</br></string>
+    <string name="tʃButtonStr">tʃ\n\<br><b>CH</b>IP</br></string>
+    <string name="ʃButtonStr">ʃ\n\<br><b>S</b>URE</br></string>
+    <string name="θButtonStr">θ\n\<br>WI<b>TH</b></br></string>
+    <string name="ðButtonStr">ð\n\<br><b>TH</b>E</br></string>
+    <string name="ŋButtonStr">ŋ\n\<br>RI<b>NG</b></br></string>
+    <string name="jButtonStr">j\n\<br><b>Y</b>OU</br></string>
+    <string name="æButtonStr">æ\n\<br>PL<b>AI</b>D</br></string>
 
     <!--Keyboard Row Five-->
-    <string name="eɪButtonStr">eɪ<br />P<b>AY</b></string>
-    <string name="eButtonStr">e<br>S<b>AI</b>D</br></string>
-    <string name="icolonButtonStr">i:<br>B<b>EE</b></br></string>
-    <string name="ɪButtonStr">ɪ<br>G<b>Y</b>M</br></string>
-    <string name="aɪButtonStr">aɪ<br>SK<b>Y</b></br></string>
-    <string name="ɒButtonStr">ɒ<br>SL<b>AW</b></br></string>
-    <string name="oʊButtonStr">oʊ<br>B<b>O</b>NE</br></string>
+    <string name="eɪButtonStr">eɪ\n\<br />P<b>AY</b></string>
+    <string name="eButtonStr">e\n\<br>S<b>AI</b>D</br></string>
+    <string name="icolonButtonStr">i:\n\<br>B<b>EE</b></br></string>
+    <string name="ɪButtonStr">ɪ\n\<br>G<b>Y</b>M</br></string>
+    <string name="aɪButtonStr">aɪ\n\<br>SK<b>Y</b></br></string>
+    <string name="ɒButtonStr">ɒ\n\<br>SL<b>AW</b></br></string>
+    <string name="oʊButtonStr">oʊ\n\<br>B<b>O</b>NE</br></string>
 
     <!--Keyboard Row Six-->
-    <string name="ʊButtonStr">ʊ<br>L<b>OO</b>K</br></string>
-    <string name="ʌButtonStr">ʌ<br>L<b>U</b>G</br></string>
-    <string name="ucolonButtonStr">u:<br>WH<b>O</b></br></string>
-    <string name="ɔɪButtonStr">ɔɪ<br>B<b>OY</b></br></string>
-    <string name="aʊButtonStr">aʊ<br>N<b>OW</b></br></string>
-    <string name="əButtonStr">ə<br>FI<b>RE</b></br></string>
-    <string name="eəʳButtonStr">eəʳ<br><b>AIR</b></br></string>
+    <string name="ʊButtonStr">ʊ\n\<br>L<b>OO</b>K</br></string>
+    <string name="ʌButtonStr">ʌ\n\<br>L<b>U</b>G</br></string>
+    <string name="ucolonButtonStr">u:\n\<br>WH<b>O</b></br></string>
+    <string name="ɔɪButtonStr">ɔɪ\n\<br>B<b>OY</b></br></string>
+    <string name="aʊButtonStr">aʊ\n\<br>N<b>OW</b></br></string>
+    <string name="əButtonStr">ə\n\<br>FI<b>RE</b></br></string>
+    <string name="eəʳButtonStr">eəʳ\n\<br><b>AIR</b></br></string>
     <!--Keyboard Row Seven-->
     <string name="AddButtonStr">"Add a phoneme "</string>
-    <string name="ɑcolonButtonStr">ɑ:<br><b>ARM</b></br></string>
-    <string name="ɜʳButtonStr">ɜ:ʳ<br>H<b>ER</b></br></string>
-    <string name="ɔcolonButtonStr">ɔ:<br>P<b>AW</b></br></string>
-    <string name="ɪəʳButtonStr">ɪəʳ<br><b>EAR</b></br></string>
-    <string name="ʊəʳButtonStr">ʊəʳ<br>C<b>U</b>RE</br></string>
+    <string name="ɑcolonButtonStr">ɑ:\n\<br><b>ARM</b></br></string>
+    <string name="ɜʳButtonStr">ɜ:ʳ\n\<br>H<b>ER</b></br></string>
+    <string name="ɔcolonButtonStr">ɔ:\n\<br>P<b>AW</b></br></string>
+    <string name="ɪəʳButtonStr">ɪəʳ\n\<br><b>EAR</b></br></string>
+    <string name="ʊəʳButtonStr">ʊəʳ\n\<br>C<b>U</b>RE</br></string>
     <string name="SpeakerButtonStr">Sounds out phoneme combinations</string>
 
     <!-- Other Strings -->

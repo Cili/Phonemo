@@ -96,6 +96,7 @@ public class PhonemeConstructor extends AppCompatActivity {
      */
     public void doneButtonOnClick(View v){
         Intent intent = new Intent(this, GraphemeConstructor.class);
+        intent.putExtra("phonemeWord",wordList);
         startActivity(intent);
     }
 
