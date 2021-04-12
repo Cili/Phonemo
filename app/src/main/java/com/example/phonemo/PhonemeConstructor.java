@@ -55,7 +55,7 @@ public class PhonemeConstructor extends AppCompatActivity {
     }
 
     public void backspaceOnClick(View v) {
-        if (wordList.size() > 0) {
+        if (wordList.size() > 0 || index>0) {
             wordList.remove(--index); //Will first decrement index THEN run the deleteCharAt function. At least, it should do that...
             constructWord();
         }
