@@ -45,7 +45,7 @@
     <string name="æButtonStr">æ<br>PL<b>AI</b>D</br></string>
 
     <!--Keyboard Row Five-->
-    <string name="eɪButtonStr">eɪ<br/>P<b>AY</b></string>
+    <string name="eɪButtonStr">eɪ<br />P<b>AY</b></string>
     <string name="eButtonStr">e<br>S<b>AI</b>D</br></string>
     <string name="icolonButtonStr">i:<br>B<b>EE</b></br></string>
     <string name="ɪButtonStr">ɪ<br>G<b>Y</b>M</br></string>
@@ -72,5 +72,6 @@
 
     <!-- Other Strings -->
     <string name="startButtonStr">START</string>
+    <string name="englishWordTitleSTR">Your english spelling is: </string>
 
 </resources>

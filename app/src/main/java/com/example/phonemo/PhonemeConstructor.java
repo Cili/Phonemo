@@ -18,6 +18,7 @@ public class PhonemeConstructor extends AppCompatActivity {
 
     private int index = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,28 +40,47 @@ public class PhonemeConstructor extends AppCompatActivity {
         //play sound of phoneme
     }
 
+    /**
+     * The last phoneme symbol that was selected will be added to the word list
+     * @param v the add button
+     */
     public void addButtonOnClick(View v) {
         wordList.add(index++, symbol); //Fun Fact: you can increment and use index at the same time
         constructWord();
     }
 
+    /**
+     * Moves the cursor to the left
+     * @param v the left arrow button
+     */
     public void leftArrowOnClick(View v) {
         if (index != 0)
             index--;
     }
 
+    /**
+     * Moves the cursor to the right
+     * @param v the right arrow button
+     */
     public void rightArrowOnClick(View v) {
         if (index < symbol.length())
             index++;
     }
 
+    /**
+     * Deletes the last character wherever the cursor is
+     * @param v the backspace button
+     */
     public void backspaceOnClick(View v) {
-        if (wordList.size() > 0 || index>0) {
+        if (wordList.size() > 0 && index>0) {
             wordList.remove(--index); //Will first decrement index THEN run the deleteCharAt function. At least, it should do that...
             constructWord();
         }
     }
 
+    /**
+     * Displays the word list in the text view box
+     */
     public void constructWord() {
         String phonemicWord = "";
         TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
@@ -69,4 +89,14 @@ public class PhonemeConstructor extends AppCompatActivity {
         }
         noname.setText(phonemicWord);
     }
+
+    /**
+     * Starts the grapheme constructor activity
+     * @param v the done button
+     */
+    public void doneButtonOnClick(View v){
+        Intent intent = new Intent(this, GraphemeConstructor.class);
+        startActivity(intent);
+    }
+
 }
