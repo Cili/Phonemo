@@ -137,7 +137,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeG"
+                android:id="@+id/Phoneme4"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -170,7 +170,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/PhonemeH"
+                android:id="@+id/Phoneme5"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -183,7 +183,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeD3"
+                android:id="@+id/Phoneme6"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -195,7 +195,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeK"
+                android:id="@+id/Phoneme7"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -208,7 +208,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeL"
+                android:id="@+id/Phoneme8"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -221,7 +221,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeM"
+                android:id="@+id/Phoneme9"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -233,7 +233,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeN"
+                android:id="@+id/Phoneme10"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -245,7 +245,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeP"
+                android:id="@+id/Phoneme11"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -264,7 +264,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/PhonemeR"
+                android:id="@+id/Phoneme12"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -276,7 +276,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeS"
+                android:id="@+id/Phoneme13"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -288,7 +288,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeT"
+                android:id="@+id/Phoneme14"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -301,7 +301,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeV"
+                android:id="@+id/Phoneme15"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -314,7 +314,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeW"
+                android:id="@+id/Phoneme16"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -326,7 +326,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeZ"
+                android:id="@+id/Phoneme17"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -338,7 +338,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeʒ"
+                android:id="@+id/Phoneme18"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -357,7 +357,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/PhonemeTʃ"
+                android:id="@+id/Phoneme19"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -369,7 +369,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeʃ"
+                android:id="@+id/Phoneme20"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -381,7 +381,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeθ"
+                android:id="@+id/Phoneme21"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -394,7 +394,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeð"
+                android:id="@+id/Phoneme22"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -407,7 +407,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeŋ"
+                android:id="@+id/Phoneme23"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -419,7 +419,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeJ"
+                android:id="@+id/Phoneme24"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -431,7 +431,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeæ"
+                android:id="@+id/Phoneme25"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -449,7 +449,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/Phonemeeɪ"
+                android:id="@+id/Phoneme26"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -461,7 +461,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeE"
+                android:id="@+id/Phoneme27"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -473,7 +473,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeIColon"
+                android:id="@+id/Phoneme28"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -486,7 +486,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeI"
+                android:id="@+id/Phoneme29"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -499,7 +499,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeaɪ"
+                android:id="@+id/Phoneme30"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -511,7 +511,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeɒ"
+                android:id="@+id/Phoneme31"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -523,7 +523,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeoʊ"
+                android:id="@+id/Phoneme32"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -541,7 +541,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/Phonemeʊ"
+                android:id="@+id/Phoneme33"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -553,7 +553,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeʌ"
+                android:id="@+id/Phoneme34"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -565,7 +565,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeUColon"
+                android:id="@+id/Phoneme35"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -578,7 +578,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeɔɪ"
+                android:id="@+id/Phoneme36"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -591,7 +591,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeaʊ"
+                android:id="@+id/Phoneme37"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -603,7 +603,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeə"
+                android:id="@+id/Phoneme38"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -615,7 +615,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeeəʳ"
+                android:id="@+id/Phoneme39"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -645,7 +645,7 @@
                 app:srcCompat="@drawable/ic_baseline_control_point_24" />
 
             <Button
-                android:id="@+id/PhonemeɑColon"
+                android:id="@+id/Phoneme40"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -657,7 +657,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeɜʳ"
+                android:id="@+id/Phoneme41"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -670,7 +670,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeɔColon"
+                android:id="@+id/Phoneme42"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -683,7 +683,7 @@
                 android:onClick="phonemeDoubleOnClick" />
 
             <Button
-                android:id="@+id/Phonemeɪəʳ"
+                android:id="@+id/Phoneme43"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -695,7 +695,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/Phonemeʊəʳ"
+                android:id="@+id/Phoneme44"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
