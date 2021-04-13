@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.LinkedList;
+
+import static java.lang.Integer.parseInt;
 
 public class PhonemeConstructor extends AppCompatActivity {
 
@@ -27,16 +30,29 @@ public class PhonemeConstructor extends AppCompatActivity {
 
     public void phonemeSingleOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 1);
+        String phonemeId = (v.getResources().getResourceName(v.getId()));
+        String phonemeNumber = phonemeId.substring(30);
+        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        noname.setText(phonemeNumber);
+        //Log.v("Phoneme", "number"+phonemeNumber);
         //play sound of phoneme
     }
 
     public void phonemeDoubleOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 2);
+        String phonemeId = (v.getResources().getResourceName(v.getId()));
+        String phonemeNumber = phonemeId.substring(30);
+        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        noname.setText(phonemeNumber);
         //play sound of phoneme
     }
 
     public void phonemeTripleOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 3);
+        String phonemeId = (v.getResources().getResourceName(v.getId()));
+        String phonemeNumber = phonemeId.substring(30);
+        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        noname.setText(phonemeNumber);
         //play sound of phoneme
     }
 
