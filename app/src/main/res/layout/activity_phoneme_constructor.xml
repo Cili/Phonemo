@@ -95,7 +95,7 @@
                 app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
 
             <Button
-                android:id="@+id/PhonemeB"
+                android:id="@+id/Phoneme1"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -110,7 +110,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeD"
+                android:id="@+id/Phoneme2"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -124,7 +124,7 @@
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/PhonemeF"
+                android:id="@+id/Phoneme3"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
