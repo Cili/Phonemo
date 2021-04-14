@@ -104,7 +104,7 @@
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
                 android:maxLines="2"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="background"
                 android:text="@string/bButtonStr"
                 android:textAllCaps="false" />
@@ -118,7 +118,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/dButtonStr"
                 android:textAllCaps="false" />
@@ -132,7 +132,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/fButtonStr"
                 android:textAllCaps="false" />
 
@@ -147,7 +147,7 @@
                 android:fontFamily="@font/capriola"
                 android:lines="2"
                 android:minLines="2"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/gButtonStr"
                 android:textAllCaps="false" />
 
@@ -178,7 +178,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/hButtonStr"
                 android:textAllCaps="false" />
 
@@ -190,7 +190,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/d3ButtonStr"
                 android:textAllCaps="false" />
 
@@ -202,7 +202,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="background"
                 android:text="@string/kButtonStr"
                 android:textAllCaps="false" />
@@ -215,7 +215,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/lButtonStr"
                 android:textAllCaps="false" />
@@ -228,7 +228,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/mButtonStr"
                 android:textAllCaps="false" />
 
@@ -240,7 +240,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/nButtonStr"
                 android:textAllCaps="false" />
 
@@ -253,7 +253,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/pButtonStr"
                 android:textAllCaps="false" />
         </TableRow>
@@ -271,7 +271,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/rButtonStr"
                 android:textAllCaps="false" />
 
@@ -283,7 +283,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/sButtonStr"
                 android:textAllCaps="false" />
 
@@ -295,7 +295,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="background"
                 android:text="@string/tButtonStr"
                 android:textAllCaps="false" />
@@ -308,7 +308,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/vButtonStr"
                 android:textAllCaps="false" />
@@ -321,7 +321,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/wButtonStr"
                 android:textAllCaps="false" />
 
@@ -333,7 +333,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/zButtonStr"
                 android:textAllCaps="false" />
 
@@ -345,7 +345,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ʒButtonStr"
                 android:textAllCaps="false"
                 android:textSize="14sp" />
@@ -364,7 +364,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/tʃButtonStr"
                 android:textAllCaps="false" />
 
@@ -376,7 +376,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ʃButtonStr"
                 android:textAllCaps="false" />
 
@@ -388,7 +388,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="background"
                 android:text="@string/θButtonStr"
                 android:textAllCaps="false" />
@@ -401,7 +401,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/ðButtonStr"
                 android:textAllCaps="false" />
@@ -414,7 +414,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ŋButtonStr"
                 android:textAllCaps="false" />
 
@@ -426,7 +426,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/jButtonStr"
                 android:textAllCaps="false" />
 
@@ -438,7 +438,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/æButtonStr"
                 android:textAllCaps="false" />
         </TableRow>
@@ -456,7 +456,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/eɪButtonStr"
                 android:textAllCaps="false" />
 
@@ -468,7 +468,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/eButtonStr"
                 android:textAllCaps="false" />
 
@@ -480,7 +480,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="background"
                 android:text="@string/icolonButtonStr"
                 android:textAllCaps="false" />
@@ -493,7 +493,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/ɪButtonStr"
                 android:textAllCaps="false" />
@@ -506,7 +506,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/aɪButtonStr"
                 android:textAllCaps="false" />
 
@@ -518,7 +518,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ɒButtonStr"
                 android:textAllCaps="false" />
 
@@ -530,7 +530,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/oʊButtonStr"
                 android:textAllCaps="false" />
         </TableRow>
@@ -548,7 +548,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ʊButtonStr"
                 android:textAllCaps="false" />
 
@@ -560,7 +560,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ʌButtonStr"
                 android:textAllCaps="false" />
 
@@ -572,7 +572,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="background"
                 android:text="@string/ucolonButtonStr"
                 android:textAllCaps="false" />
@@ -585,7 +585,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/ɔɪButtonStr"
                 android:textAllCaps="false" />
@@ -598,7 +598,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/aʊButtonStr"
                 android:textAllCaps="false" />
 
@@ -610,7 +610,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeSingleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/əButtonStr"
                 android:textAllCaps="false" />
 
@@ -622,7 +622,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeTripleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/eəʳButtonStr"
                 android:textAllCaps="false" />
 
@@ -652,7 +652,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeDoubleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ɑcolonButtonStr"
                 android:textAllCaps="false" />
 
@@ -664,7 +664,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeTripleOnClick"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="background"
                 android:text="@string/ɜʳButtonStr"
                 android:textAllCaps="false" />
@@ -677,10 +677,10 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
+                android:onClick="phonemeOnClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/ɔcolonButtonStr"
-                android:textAllCaps="false"
-                android:onClick="phonemeDoubleOnClick" />
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/Phoneme43"
@@ -690,7 +690,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeTripleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ɪəʳButtonStr"
                 android:textAllCaps="false" />
 
@@ -702,7 +702,7 @@
                 android:layout_weight="1"
                 android:background="@color/phonemared"
                 android:fontFamily="@font/capriola"
-                android:onClick="phonemeTripleOnClick"
+                android:onClick="phonemeOnClick"
                 android:text="@string/ʊəʳButtonStr"
                 android:textAllCaps="false" />
 
