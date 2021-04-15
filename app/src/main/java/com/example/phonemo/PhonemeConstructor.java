@@ -1,8 +1,12 @@
 package com.example.phonemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,36 +32,45 @@ public class PhonemeConstructor extends AppCompatActivity {
      * On start, the initial phoneme constructor page is built
      * @param savedInstanceState -
      */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phoneme_constructor);
     }
 
-    /**
-     * Plays the sound of the selected single-character phoneme upon a single press on the respective phoneme's button and
-     * displays the number of the phoneme in the phonemic workspace
-     * @param v the phoneme button
-     */
-    public void phonemeSingleOnClick(View v) {
-        symbol = ((Button) v).getText().toString().substring(0, 1);
+    public void phonemeOnClick(View v) {
+        symbol = ((Button) v).getText().toString().substring(0, 3).trim();
+
+        //Button button = (Button) v;
+        v.setBackgroundColor(ContextCompat.getColor(PhonemeConstructor.this, R.color.buttonhighlight));
+
         String phonemeId = (v.getResources().getResourceName(v.getId()));
         String phonemeNumber = phonemeId.substring(30);
-        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
-        noname.setText(phonemeNumber);
+
+        String fileName = "R.raw.phonemeaudio"+phonemeNumber;
+
+        MediaPlayer mediaPlayer = MediaPlayer.create(PhonemeConstructor.this, Uri.parse(fileName));
+        mediaPlayer.start();
+
+        //TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        //noname.setText(phonemeNumber);
         //Log.v("Phoneme", "number"+phonemeNumber);
         //play sound of phoneme
     }
 
+    /**public void phonemeDoubleOnClick(View v) {
     /**
      * Plays the sound of the selected two-character phoneme upon a single press on the respective phoneme's button and
      * displays the number of the phoneme in the phonemic workspace
      * @param v the phoneme button
-     */
+
     public void phonemeDoubleOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 2);
         String phonemeId = (v.getResources().getResourceName(v.getId()));
         String phonemeNumber = phonemeId.substring(30);
+        int number = Integer.parseInt(phonemeNumber);
+
         TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
         noname.setText(phonemeNumber);
         //play sound of phoneme
@@ -67,15 +80,17 @@ public class PhonemeConstructor extends AppCompatActivity {
      * Plays the sound of the selected three-character phoneme upon a single press on the respective phoneme's button and
      * displays the number of the phoneme in the phonemic workspace
      * @param v the phoneme button
-     */
+
     public void phonemeTripleOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 3);
         String phonemeId = (v.getResources().getResourceName(v.getId()));
         String phonemeNumber = phonemeId.substring(30);
+        int number = Integer.parseInt(phonemeNumber);
+
         TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
         noname.setText(phonemeNumber);
         //play sound of phoneme
-    }
+    }**/
 
     /**
      * The last phoneme symbol that was selected will be added to the phonemic workspace
@@ -122,7 +137,7 @@ public class PhonemeConstructor extends AppCompatActivity {
      */
     public void constructWord() {
         String phonemicWord = "";
-        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        TextView noname = findViewById(R.id.PhonemeDisplay);
         for (String str : wordList) {
             phonemicWord += str;
         }
