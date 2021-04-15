@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Starts the Word Creation Activity
-     * @param v Takes in click?
+     * @param v the start button
      */
     public void onCreation(View v){
         Intent intent = new Intent(this, PhonemeConstructor.class);

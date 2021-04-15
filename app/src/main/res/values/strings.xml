@@ -73,5 +73,7 @@
     <!-- Other Strings -->
     <string name="startButtonStr">START</string>
     <string name="englishWordTitleSTR">Your english spelling is: </string>
+    <string name="noPhonemeError">Please enter at least one phoneme to move on.</string>
+
 
 </resources>

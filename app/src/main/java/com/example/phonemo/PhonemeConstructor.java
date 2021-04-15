@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.LinkedList;
 
 import static java.lang.Integer.parseInt;
@@ -18,16 +20,25 @@ public class PhonemeConstructor extends AppCompatActivity {
     private String symbol = "";
     //private StringBuilder word = new StringBuilder();
     private LinkedList<String> wordList = new LinkedList<>();
-
+    private int empty=0;
     private int index = 0;
 
 
+    /**
+     * On start, the initial phoneme constructor page is built
+     * @param savedInstanceState -
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phoneme_constructor);
     }
 
+    /**
+     * Plays the sound of the selected single-character phoneme upon a single press on the respective phoneme's button and
+     * displays the number of the phoneme in the phonemic workspace
+     * @param v the phoneme button
+     */
     public void phonemeSingleOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 1);
         String phonemeId = (v.getResources().getResourceName(v.getId()));
@@ -38,6 +49,11 @@ public class PhonemeConstructor extends AppCompatActivity {
         //play sound of phoneme
     }
 
+    /**
+     * Plays the sound of the selected two-character phoneme upon a single press on the respective phoneme's button and
+     * displays the number of the phoneme in the phonemic workspace
+     * @param v the phoneme button
+     */
     public void phonemeDoubleOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 2);
         String phonemeId = (v.getResources().getResourceName(v.getId()));
@@ -47,6 +63,11 @@ public class PhonemeConstructor extends AppCompatActivity {
         //play sound of phoneme
     }
 
+    /**
+     * Plays the sound of the selected three-character phoneme upon a single press on the respective phoneme's button and
+     * displays the number of the phoneme in the phonemic workspace
+     * @param v the phoneme button
+     */
     public void phonemeTripleOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 3);
         String phonemeId = (v.getResources().getResourceName(v.getId()));
@@ -57,12 +78,13 @@ public class PhonemeConstructor extends AppCompatActivity {
     }
 
     /**
-     * The last phoneme symbol that was selected will be added to the word list
+     * The last phoneme symbol that was selected will be added to the phonemic workspace
      * @param v the add button
      */
     public void addButtonOnClick(View v) {
         wordList.add(index++, symbol); //Fun Fact: you can increment and use index at the same time
         constructWord();
+        empty++;
     }
 
     /**
@@ -84,18 +106,19 @@ public class PhonemeConstructor extends AppCompatActivity {
     }
 
     /**
-     * Deletes the last character wherever the cursor is
+     * Deletes the previous character of wherever the cursor is
      * @param v the backspace button
      */
     public void backspaceOnClick(View v) {
         if (wordList.size() > 0 && index>0) {
             wordList.remove(--index); //Will first decrement index THEN run the deleteCharAt function. At least, it should do that...
             constructWord();
+            empty--;
         }
     }
 
     /**
-     * Displays the word list in the text view box
+     * Displays the phonemic list in the text view box
      */
     public void constructWord() {
         String phonemicWord = "";
@@ -107,13 +130,18 @@ public class PhonemeConstructor extends AppCompatActivity {
     }
 
     /**
-     * Starts the grapheme constructor activity
+     * Starts the grapheme constructor activity if the phonemic list/text view box is not empty
      * @param v the done button
      */
     public void doneButtonOnClick(View v){
         Intent intent = new Intent(this, GraphemeConstructor.class);
         intent.putExtra("phonemeWord",wordList);
-        startActivity(intent);
+        if (empty>0)
+            startActivity(intent);
+        else
+            Snackbar.make(findViewById(R.id.DoneButton), R.string.noPhonemeError,
+                    Snackbar.LENGTH_SHORT)
+                    .show();
     }
 
 }

@@ -8,7 +8,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.phonemo"
-        minSdkVersion 23
+        //change minSdkVersion to 22 for Samsung tablet
+        minSdkVersion 22
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
