@@ -18,7 +18,7 @@
     <string name="BackspaceButtonStr">Backspace</string>
 
     <!--Keyboard Row Two-->
-    <string name="hButtonStr">h\n\<b>H</b>OP</string>
+    <string name="hButtonStr">h  \n\<b>H</b>OP</string>
     <string name="d3ButtonStr">dʒ \n\<b>J</b>AM</string>
     <string name="kButtonStr">k  \n\<b>C</b>AT</string>
     <string name="lButtonStr">l  \n\<b>L</b>IT</string>

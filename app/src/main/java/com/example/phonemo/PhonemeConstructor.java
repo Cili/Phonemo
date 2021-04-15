@@ -1,22 +1,29 @@
 package com.example.phonemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.LinkedList;
 
+import static java.lang.Integer.parseInt;
+
 public class PhonemeConstructor extends AppCompatActivity {
 
     private String symbol = "";
     //private StringBuilder word = new StringBuilder();
     private LinkedList<String> wordList = new LinkedList<>();
-
     private int index = 0;
+
 
 
     @Override
@@ -25,14 +32,47 @@ public class PhonemeConstructor extends AppCompatActivity {
         setContentView(R.layout.activity_phoneme_constructor);
     }
 
-    /**
-     * A phoneme will be selected and its respective sound will be played
-     * @param v the phoneme button
-     */
     public void phonemeOnClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 3).trim();
-        String phonemeId = (v.getResources().getResourceName(v.getId()).substring(3));
+
+        //Button button = (Button) v;
+        v.setBackgroundColor(ContextCompat.getColor(PhonemeConstructor.this, R.color.buttonhighlight));
+
+        String phonemeId = (v.getResources().getResourceName(v.getId()));
+        String phonemeNumber = phonemeId.substring(30);
+
+        String fileName = "R.raw.phonemeaudio"+phonemeNumber;
+
+        MediaPlayer mediaPlayer = MediaPlayer.create(PhonemeConstructor.this, Uri.parse(fileName));
+        mediaPlayer.start();
+
+        //TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        //noname.setText(phonemeNumber);
+        //Log.v("Phoneme", "number"+phonemeNumber);
+        //play sound of phoneme
     }
+
+    /**public void phonemeDoubleOnClick(View v) {
+        symbol = ((Button) v).getText().toString().substring(0, 2);
+        String phonemeId = (v.getResources().getResourceName(v.getId()));
+        String phonemeNumber = phonemeId.substring(30);
+        int number = Integer.parseInt(phonemeNumber);
+
+        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        noname.setText(phonemeNumber);
+        //play sound of phoneme
+    }
+
+    public void phonemeTripleOnClick(View v) {
+        symbol = ((Button) v).getText().toString().substring(0, 3);
+        String phonemeId = (v.getResources().getResourceName(v.getId()));
+        String phonemeNumber = phonemeId.substring(30);
+        int number = Integer.parseInt(phonemeNumber); 
+
+        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        noname.setText(phonemeNumber);
+        //play sound of phoneme
+    }**/
 
     /**
      * The last phoneme symbol that was selected will be added to the word list
@@ -77,7 +117,7 @@ public class PhonemeConstructor extends AppCompatActivity {
      */
     public void constructWord() {
         String phonemicWord = "";
-        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
+        TextView noname = findViewById(R.id.PhonemeDisplay);
         for (String str : wordList) {
             phonemicWord += str;
         }
@@ -90,7 +130,7 @@ public class PhonemeConstructor extends AppCompatActivity {
      */
     public void doneButtonOnClick(View v){
         Intent intent = new Intent(this, GraphemeConstructor.class);
-        intent.putExtra("phonemeWord", wordList);
+        intent.putExtra("phonemeWord",wordList);
         startActivity(intent);
     }
 
