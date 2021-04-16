@@ -6,9 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class GraphemeConstructor extends AppCompatActivity {
+
+    ArrayList<String> phonemeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +19,7 @@ public class GraphemeConstructor extends AppCompatActivity {
         setContentView(R.layout.activity_grapheme_constructor);
     }
 
-    private void displayPhonemes(){
-        //Intent intent = getIntent();
-       // LinkedList<String> phonemeList = intent.getStringArrayListExtra("phonemeWord");
+    private void displayPhonemes(){ Intent intent = getIntent();
+       phonemeList = intent.getStringArrayListExtra("phonemeWord");
     }
 }

@@ -3,8 +3,6 @@ package com.example.phonemo;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.media.SoundPool;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,12 +12,12 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class PhonemeConstructor extends AppCompatActivity implements View.OnClickListener {
 
     private String symbol = "";
-    private LinkedList<String> wordList = new LinkedList<>();
+    private ArrayList<String> wordList = new ArrayList<>();
     private int empty=0;
     private int index = 0;
 
@@ -376,7 +374,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the right arrow button
      */
     public void rightArrowOnClick(View v) {
-        if (index < symbol.length())
+        if (index <= symbol.length())
             index++;
     }
 
@@ -410,7 +408,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      */
     public void doneButtonOnClick(View v){
         Intent intent = new Intent(this, GraphemeConstructor.class);
-        intent.putExtra("phonemeWord",wordList);
+        intent.putExtra("phonemeWord", wordList);
         if (empty>0)
             startActivity(intent);
         else
@@ -419,8 +417,8 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                     .show();
         //intent.putExtra("phonemeWord",wordList);
         startActivity(intent);
+
+
     }
-
-
 
 }
