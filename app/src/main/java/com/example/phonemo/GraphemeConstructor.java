@@ -17,7 +17,7 @@ public class GraphemeConstructor extends AppCompatActivity {
     }
 
     private void displayPhonemes(){
-        Intent intent = getIntent();
+        //Intent intent = getIntent();
        // LinkedList<String> phonemeList = intent.getStringArrayListExtra("phonemeWord");
     }
 }
