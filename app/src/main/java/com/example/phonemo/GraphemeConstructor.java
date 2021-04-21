@@ -30,12 +30,4 @@ public class GraphemeConstructor extends AppCompatActivity {
         noname.setText(phonemicWord.toString());
 
     }
-
-    /*private void displayPhonemes(){
-        Intent intent = getIntent();
-        phonemeList = intent.getStringArrayListExtra("phonemeWord");
-
-        TextView noname = findViewById(R.id.PhonemeDisplay2);
-        noname.setText((CharSequence) phonemeList.toString());
-    }*/
 }
