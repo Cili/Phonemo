@@ -20,7 +20,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     private String symbol = "";
     private ArrayList<String> wordList = new ArrayList<>();
     private ArrayList<MediaPlayer> soundList = new ArrayList<>();
-    private int empty=0;
+    private int empty = 0;
     private int index = 0;
     private MediaPlayer mediaPlayer;
 
