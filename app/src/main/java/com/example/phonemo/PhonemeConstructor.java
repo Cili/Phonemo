@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 
@@ -18,16 +19,16 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
 
     private String symbol = "";
     private ArrayList<String> wordList = new ArrayList<>();
+    private ArrayList<MediaPlayer> soundList = new ArrayList<>();
     private int empty=0;
     private int index = 0;
+    private MediaPlayer mediaPlayer;
 
 
     /**
      * On start, the initial phoneme constructor page is built
      * @param savedInstanceState -
      */
-    private MediaPlayer mediaPlayer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -136,12 +137,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         symbol = ((Button) v).getText().toString().substring(0, 3).trim();
 
-        /*Button button = (Button) v;
         v.setBackgroundColor(ContextCompat.getColor(PhonemeConstructor.this, R.color.buttonhighlight));
-
-        String phonemeId = (v.getResources().getResourceName(v.getId()));
-        String phonemeNumber = phonemeId.substring(30);
-        String fileName = "R.raw.phonemeaudio"+phonemeNumber;*/
 
         switch (v.getId()) {
             case R.id.Phoneme01:
@@ -328,34 +324,13 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
         //mediaPlayer.release();
     }
 
-    /**public void phonemeDoubleOnClick(View v) {
-        symbol = ((Button) v).getText().toString().substring(0, 2);
-        String phonemeId = (v.getResources().getResourceName(v.getId()));
-        String phonemeNumber = phonemeId.substring(30);
-        int number = Integer.parseInt(phonemeNumber);
-
-        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
-        noname.setText(phonemeNumber);
-        //play sound of phoneme
-    }
-
-    public void phonemeTripleOnClick(View v) {
-        symbol = ((Button) v).getText().toString().substring(0, 3);
-        String phonemeId = (v.getResources().getResourceName(v.getId()));
-        String phonemeNumber = phonemeId.substring(30);
-        int number = Integer.parseInt(phonemeNumber); 
-
-        TextView noname = (TextView) findViewById(R.id.PhonemeDisplay);
-        noname.setText(phonemeNumber);
-        //play sound of phoneme
-    }**/
-
     /**
      * The last phoneme symbol that was selected will be added to the phonemic workspace
      * @param v the add button
      */
     public void addButtonOnClick(View v) {
         wordList.add(index++, symbol); //Fun Fact: you can increment and use index at the same time
+        soundList.add(mediaPlayer);
         constructWord();
         empty++;
     }
@@ -387,6 +362,13 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
             wordList.remove(--index); //Will first decrement index THEN run the deleteCharAt function. At least, it should do that...
             constructWord();
             empty--;
+        }
+    }
+
+    public void speakerOnClick(View v){
+        for(MediaPlayer m: soundList){
+            m.start();
+            //m.stop();
         }
     }
 

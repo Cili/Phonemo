@@ -96,7 +96,7 @@
 
             <Button
                 android:id="@+id/Phoneme01"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="91dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -713,6 +713,7 @@
                 android:background="@color/phonemared"
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/SpeakerButtonStr"
+                android:onClick="speakerOnClick"
                 app:srcCompat="@drawable/ic_baseline_campaign_24" />
 
         </TableRow>

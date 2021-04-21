@@ -18,29 +18,242 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="457dp"
+        android:id="@+id/PhonemeDisplay2"
+        android:layout_width="match_parent"
         android:layout_height="171dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="704dp"
         android:fontFamily="@font/capriola"
         android:textAlignment="center"
         android:textColor="@color/phonemared"
         android:textSize="40sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="458dp"
+        android:id="@+id/GraphemeDisplay"
+        android:layout_width="match_parent"
         android:layout_height="170dp"
-        android:layout_marginStart="71dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="106dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhonemeDisplay2" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/TabBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <Button
+                android:id="@+id/button17"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:contentDescription="@string/LeftArrowStr"
+                app:srcCompat="@drawable/abc_vector_test" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:contentDescription="@string/RightArrowStr"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+            <Button
+                android:id="@+id/button18"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Grapheme01"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola" />
+
+            <Button
+                android:id="@+id/Grapheme02"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola" />
+
+            <Button
+                android:id="@+id/Grapheme03"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Grapheme04"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:fontFamily="@font/capriola" />
+
+            <Button
+                android:id="@+id/Grapheme05"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+
+            <Button
+                android:id="@+id/Grapheme06"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Grapheme08"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+
+            <Button
+                android:id="@+id/Grapheme07"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+
+            <Button
+                android:id="@+id/Grapheme09"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/Grapheme11"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+
+            <Button
+                android:id="@+id/Grapheme10"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/phonemared" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/phonemared"
+                android:contentDescription="@string/CheckDescriptionStr"
+                app:srcCompat="@drawable/ic_baseline_spellcheck_24" />
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/TabBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/phonemared"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/WordCreationApp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/capriola"
+            android:text="@string/WordCreateStr" />
+
+        <Button
+            android:id="@+id/SocialMediaTab"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/capriola"
+            android:text="@string/SocialMediaStr" />
+
+        <Button
+            android:id="@+id/PersonalLibraryTab"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/capriola"
+            android:text="@string/PersonalLibraryStr" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
