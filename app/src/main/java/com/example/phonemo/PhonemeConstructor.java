@@ -16,6 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 //import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class PhonemeConstructor extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,6 +31,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     private SoundPool soundPool;
     private int sound01, sound02, sound03, sound04, sound05, sound06, sound07, sound08, sound09, sound10, sound11, sound12, sound13, sound14, sound15, sound16, sound17, sound18, sound19, sound20, sound21, sound22, sound23, sound24, sound25, sound26, sound27, sound28, sound29, sound30, sound31, sound32, sound33, sound34, sound35, sound36, sound37, sound38, sound39, sound40, sound41, sound42, sound43, sound44;
     private int currentSound;
+    private final ScheduledExecutorService delay = Executors.newScheduledThreadPool(1);
 
     /**
      * On start, the initial phoneme constructor page is built
@@ -518,10 +522,21 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * Plays the sounds of all the chosen phonemes
      * @param v the speaker button
      */
-    public void speakerOnClick(View v){
-        for(Integer m: soundList){
+    public void speakerOnClick(View v) throws InterruptedException {
+        for(Integer m: soundList) {
+            soundPool.notify();
             soundPool.play(m, 1, 1, 0, 0, 1);
+            soundPool.wait(500);
+            /*delay.schedule(new Runnable() {
+                @Override
+                public void run() {
+                    soundPool.
+                }
+            }, 1, TimeUnit.SECONDS);*/
+
         }
+
+
     }
 
     /**
@@ -550,7 +565,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                     Snackbar.LENGTH_SHORT)
                     .show();
         //intent.putExtra("phonemeWord",wordList);
-        startActivity(intent);
         //mediaPlayer.release();
 
     }

@@ -161,7 +161,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/Grapheme08"
+                android:id="@+id/Grapheme07"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -169,7 +169,7 @@
                 android:background="@color/phonemared" />
 
             <Button
-                android:id="@+id/Grapheme07"
+                android:id="@+id/Grapheme08"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -191,7 +191,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/Grapheme11"
+                android:id="@+id/Grapheme10"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -199,7 +199,7 @@
                 android:background="@color/phonemared" />
 
             <Button
-                android:id="@+id/Grapheme10"
+                android:id="@+id/Grapheme11"
                 style="@style/Widget.AppCompat.Button.Borderless.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
