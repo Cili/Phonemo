@@ -21,8 +21,6 @@ public class GraphemeConstructor extends AppCompatActivity {
     private ArrayList<String> phonemeList;
     private String[] graphemes;
     private Button button01, button02, button03, button04,button05, button06, button07, button08, button09, button10, button11;
-    //private ArrayList<GraphemeClass> graphemes = new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,17 +52,38 @@ public class GraphemeConstructor extends AppCompatActivity {
         final Controller aController = (Controller) getApplicationContext();
 
         graphemes = aController.getMatchingGraphemes(phonemeList.get(0));
+        displayGraphemes(graphemes);
 
         //readPhonemeData();
 
     }
 
+    /*private String[] getMatchingGraphemes(String symbol){
+        for (int i=1; i<graphemes.size(); i++){
+            Log.wtf("GraphemeConstructor", "check: "+symbol+", "+graphemes.get(i).getSymbol());
+            if(symbol==graphemes.get(i).getSymbol()){
+                return graphemes.get(i).getGraphemes();
 
+            }
+        }
 
-    public void displayGraphemes(String[] graphemes){
+        return null;
+    }*/
+
+    public void displayGraphemes(String[] matchingGraphemes){
+        button01.setText(matchingGraphemes[0]);
+        button02.setText(matchingGraphemes[1]);
+        button03.setText(matchingGraphemes[2]);
+        button04.setText(matchingGraphemes[3]);
+        button05.setText(matchingGraphemes[4]);
+        button06.setText(matchingGraphemes[5]);
+        button07.setText(matchingGraphemes[6]);
+        button08.setText(matchingGraphemes[7]);
+        button09.setText(matchingGraphemes[8]);
+        button10.setText(matchingGraphemes[9]);
+        button11.setText(matchingGraphemes[10]);
 
         /*GraphemeClass g = graphemes.get(2);
-
         String[] matchingGraphemes = g.getGraphemes();
         button01.setText(g.getGraphemes()[0]);
         button02.setText(matchingGraphemes[1]);
@@ -77,19 +96,6 @@ public class GraphemeConstructor extends AppCompatActivity {
         button09.setText(matchingGraphemes[8]);
         button10.setText(matchingGraphemes[9]);
         button11.setText(matchingGraphemes[10]);*/
-
-
-                button01.setText(graphemes[0]);
-                button02.setText(graphemes[1]);
-                button03.setText(graphemes[2]);
-                button04.setText(graphemes[3]);
-                button05.setText(graphemes[4]);
-                button06.setText(graphemes[5]);
-                button07.setText(graphemes[6]);
-                button08.setText(graphemes[7]);
-                button09.setText(graphemes[8]);
-                button10.setText(graphemes[9]);
-                button11.setText(graphemes[10]);
 
     }
 }

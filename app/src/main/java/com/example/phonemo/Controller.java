@@ -12,18 +12,17 @@ public class Controller extends Application {
         return graphemes;
     }
 
-    public void addGrapheme(GraphemeClass question){
-        graphemes.add(question);
+    public void addGrapheme(GraphemeClass grapheme){
+        graphemes.add(grapheme);
     }
 
     public String[] getMatchingGraphemes(String match){
-        for (int i=1; i<graphemes.size(); i++){
+        for (int i=0; i<graphemes.size(); i++){
             if(match==graphemes.get(i).getSymbol()){
                 return graphemes.get(i).getGraphemes();
 
             }
         }
-
         return null;
     }
 

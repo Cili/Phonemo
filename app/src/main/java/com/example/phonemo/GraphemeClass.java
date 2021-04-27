@@ -1,5 +1,8 @@
 package com.example.phonemo;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * This class stores the grapheme data
  */

@@ -523,18 +523,18 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the speaker button
      */
     public void speakerOnClick(View v) throws InterruptedException {
-        for(Integer m: soundList) {
+        /*for(Integer m: soundList) {
             soundPool.notify();
             soundPool.play(m, 1, 1, 0, 0, 1);
             soundPool.wait(500);
-            /*delay.schedule(new Runnable() {
+            *//*delay.schedule(new Runnable() {
                 @Override
                 public void run() {
                     soundPool.
                 }
-            }, 1, TimeUnit.SECONDS);*/
+            }, 1, TimeUnit.SECONDS);*//*
 
-        }
+        }*/
 
 
     }
