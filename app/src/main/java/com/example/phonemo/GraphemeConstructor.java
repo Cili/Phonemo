@@ -30,6 +30,8 @@ public class GraphemeConstructor extends AppCompatActivity {
         Intent intent = getIntent();
         phonemeList = intent.getStringArrayListExtra("phonemeWord");
 
+        Log.wtf("Constructissue", "check: "+phonemeList.get(0));
+
         StringBuilder phonemicWord = new StringBuilder();
         TextView noname = findViewById(R.id.PhonemeDisplay2);
         for (String str : phonemeList) {
@@ -51,24 +53,13 @@ public class GraphemeConstructor extends AppCompatActivity {
 
         final Controller aController = (Controller) getApplicationContext();
 
+
+
         graphemes = aController.getMatchingGraphemes(phonemeList.get(0));
+
         displayGraphemes(graphemes);
 
-        //readPhonemeData();
-
     }
-
-    /*private String[] getMatchingGraphemes(String symbol){
-        for (int i=1; i<graphemes.size(); i++){
-            Log.wtf("GraphemeConstructor", "check: "+symbol+", "+graphemes.get(i).getSymbol());
-            if(symbol==graphemes.get(i).getSymbol()){
-                return graphemes.get(i).getGraphemes();
-
-            }
-        }
-
-        return null;
-    }*/
 
     public void displayGraphemes(String[] matchingGraphemes){
         button01.setText(matchingGraphemes[0]);
@@ -82,20 +73,6 @@ public class GraphemeConstructor extends AppCompatActivity {
         button09.setText(matchingGraphemes[8]);
         button10.setText(matchingGraphemes[9]);
         button11.setText(matchingGraphemes[10]);
-
-        /*GraphemeClass g = graphemes.get(2);
-        String[] matchingGraphemes = g.getGraphemes();
-        button01.setText(g.getGraphemes()[0]);
-        button02.setText(matchingGraphemes[1]);
-        button03.setText(matchingGraphemes[2]);
-        button04.setText(matchingGraphemes[3]);
-        button05.setText(matchingGraphemes[4]);
-        button06.setText(matchingGraphemes[5]);
-        button07.setText(matchingGraphemes[6]);
-        button08.setText(matchingGraphemes[7]);
-        button09.setText(matchingGraphemes[8]);
-        button10.setText(matchingGraphemes[9]);
-        button11.setText(matchingGraphemes[10]);*/
 
     }
 }

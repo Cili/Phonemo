@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<GraphemeClass> graphemeArray = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         final Controller aController = (Controller) this.getApplicationContext();
 
         for(GraphemeClass q: aController.getGraphemes()){
-            Log.v("Main Activity", "symbols: "+q.getSymbol() +" graphemes: "+ q.getGraphemes());
+            Log.v("Main Activity", "symbols: "+q.getSymbol() +" graphemes: "+ q.getGraphemes()[0]);
 
         }
     }
@@ -57,9 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 GraphemeClass graph = new GraphemeClass(fields);
                 aController.addGrapheme(graph);
 
-               // graphemeArray.add(graph);
-
-                Log.wtf("GraphemeConstructor", "check"+graph.getSymbol() );
+               Log.wtf("GraphemeConstructor", "check"+aController.getGraphemesAtPlace(aController.getGraphemes().size()-1).getSymbol()+", "+aController.getGraphemesAtPlace(aController.getGraphemes().size()-1).getGraphemes());
 
             }
         }
@@ -67,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
             Log.wtf("GraphemeConstructor", "Error Reading Data on Line"+line);
 
         }
-
     }
 
     /**
