@@ -26,12 +26,14 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     private ArrayList<String> wordList = new ArrayList<>();
     private ArrayList<Integer> soundList = new ArrayList<>();
     private int empty = 0;
-    private int index=0;
+    private int index = 0;
+    private Button b;
     //private MediaPlayer mediaPlayer;
     private SoundPool soundPool;
     private int sound01, sound02, sound03, sound04, sound05, sound06, sound07, sound08, sound09, sound10, sound11, sound12, sound13, sound14, sound15, sound16, sound17, sound18, sound19, sound20, sound21, sound22, sound23, sound24, sound25, sound26, sound27, sound28, sound29, sound30, sound31, sound32, sound33, sound34, sound35, sound36, sound37, sound38, sound39, sound40, sound41, sound42, sound43, sound44;
     private int currentSound;
     private final ScheduledExecutorService delay = Executors.newScheduledThreadPool(1);
+    private boolean firstClick = true;
 
     /**
      * On start, the initial phoneme constructor page is built
@@ -49,97 +51,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                 .build();
 
         soundPool = new SoundPool.Builder().setMaxStreams(50).setAudioAttributes(audioAttributes).build();
-
-        /*Button phoneme01 = findViewById(R.id.Phoneme01);
-        Button phoneme02 = findViewById(R.id.Phoneme02);
-        Button phoneme03 = findViewById(R.id.Phoneme03);
-        Button phoneme04 = findViewById(R.id.Phoneme04);
-        Button phoneme05 = findViewById(R.id.Phoneme05);
-        Button phoneme06 = findViewById(R.id.Phoneme06);
-        Button phoneme07 = findViewById(R.id.Phoneme07);
-        Button phoneme08 = findViewById(R.id.Phoneme08);
-        Button phoneme09 = findViewById(R.id.Phoneme09);
-        Button phoneme10 = findViewById(R.id.Phoneme10);
-        Button phoneme11 = findViewById(R.id.Phoneme11);
-        Button phoneme12 = findViewById(R.id.Phoneme12);
-        Button phoneme13 = findViewById(R.id.Phoneme13);
-        Button phoneme14 = findViewById(R.id.Phoneme14);
-        Button phoneme15 = findViewById(R.id.Phoneme15);
-        Button phoneme16 = findViewById(R.id.Phoneme16);
-        Button phoneme17 = findViewById(R.id.Phoneme17);
-        Button phoneme18 = findViewById(R.id.Phoneme18);
-        Button phoneme19 = findViewById(R.id.Phoneme19);
-        Button phoneme20 = findViewById(R.id.Phoneme20);
-        Button phoneme21 = findViewById(R.id.Phoneme21);
-        Button phoneme22 = findViewById(R.id.Phoneme22);
-        Button phoneme23 = findViewById(R.id.Phoneme23);
-        Button phoneme24 = findViewById(R.id.Phoneme24);
-        Button phoneme25 = findViewById(R.id.Phoneme25);
-        Button phoneme26 = findViewById(R.id.Phoneme26);
-        Button phoneme27 = findViewById(R.id.Phoneme27);
-        Button phoneme28 = findViewById(R.id.Phoneme28);
-        Button phoneme29 = findViewById(R.id.Phoneme29);
-        Button phoneme30 = findViewById(R.id.Phoneme30);
-        Button phoneme31 = findViewById(R.id.Phoneme31);
-        Button phoneme32 = findViewById(R.id.Phoneme32);
-        Button phoneme33 = findViewById(R.id.Phoneme33);
-        Button phoneme34 = findViewById(R.id.Phoneme34);
-        Button phoneme35 = findViewById(R.id.Phoneme35);
-        Button phoneme36 = findViewById(R.id.Phoneme36);
-        Button phoneme37 = findViewById(R.id.Phoneme37);
-        Button phoneme38 = findViewById(R.id.Phoneme38);
-        Button phoneme39 = findViewById(R.id.Phoneme39);
-        Button phoneme40 = findViewById(R.id.Phoneme40);
-        Button phoneme41 = findViewById(R.id.Phoneme41);
-        Button phoneme42 = findViewById(R.id.Phoneme42);
-        Button phoneme43 = findViewById(R.id.Phoneme43);
-        Button phoneme44 = findViewById(R.id.Phoneme44);
-
-        phoneme01.setOnClickListener(this);
-        phoneme02.setOnClickListener(this);
-        phoneme03.setOnClickListener(this);
-        phoneme04.setOnClickListener(this);
-        phoneme05.setOnClickListener(this);
-        phoneme06.setOnClickListener(this);
-        phoneme07.setOnClickListener(this);
-        phoneme08.setOnClickListener(this);
-        phoneme09.setOnClickListener(this);
-        phoneme10.setOnClickListener(this);
-        phoneme11.setOnClickListener(this);
-        phoneme12.setOnClickListener(this);
-        phoneme13.setOnClickListener(this);
-        phoneme14.setOnClickListener(this);
-        phoneme15.setOnClickListener(this);
-        phoneme16.setOnClickListener(this);
-        phoneme17.setOnClickListener(this);
-        phoneme18.setOnClickListener(this);
-        phoneme19.setOnClickListener(this);
-        phoneme20.setOnClickListener(this);
-        phoneme21.setOnClickListener(this);
-        phoneme22.setOnClickListener(this);
-        phoneme23.setOnClickListener(this);
-        phoneme24.setOnClickListener(this);
-        phoneme25.setOnClickListener(this);
-        phoneme26.setOnClickListener(this);
-        phoneme27.setOnClickListener(this);
-        phoneme28.setOnClickListener(this);
-        phoneme29.setOnClickListener(this);
-        phoneme30.setOnClickListener(this);
-        phoneme31.setOnClickListener(this);
-        phoneme32.setOnClickListener(this);
-        phoneme33.setOnClickListener(this);
-        phoneme34.setOnClickListener(this);
-        phoneme35.setOnClickListener(this);
-        phoneme36.setOnClickListener(this);
-        phoneme37.setOnClickListener(this);
-        phoneme38.setOnClickListener(this);
-        phoneme39.setOnClickListener(this);
-        phoneme40.setOnClickListener(this);
-        phoneme41.setOnClickListener(this);
-        phoneme42.setOnClickListener(this);
-        phoneme43.setOnClickListener(this);
-        phoneme44.setOnClickListener(this);
-*/
 
         sound01 = soundPool.load(this, R.raw.phonemeaudio01,1);
         sound02 = soundPool.load(this, R.raw.phonemeaudio02,1);
@@ -197,12 +108,19 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      */
     @Override
     public void onClick(View v) {
-        symbol = ((Button) v).getText().toString().substring(0, 3).trim();
+        if(firstClick)
+            firstClick = false;
+        else
+            b.setBackgroundColor(getResources().getColor(R.color.phonemared));
+        b = findViewById(v.getId());
+        symbol = b.getText().toString().substring(0, 3).trim();
+        b.setBackgroundColor(getResources().getColor(R.color.buttonhighlight));
         /*String phonemeId = (v.getResources().getResourceName(v.getId()));
         String phonemeNumber = "sound"+phonemeId.substring(30);
         currentSound = Integer.parseInt(phonemeNumber);
         TextView tv = findViewById(R.id.PhonemeDisplay);
         tv.setText(phonemeNumber);*/
+
         switch (v.getId()) {
             case R.id.Phoneme01:
                 //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio01);
@@ -564,7 +482,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
             Snackbar.make(findViewById(R.id.DoneButton), R.string.noPhonemeError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-        //intent.putExtra("phonemeWord",wordList);
+                //intent.putExtra("phonemeWord",wordList);
         //mediaPlayer.release();
 
     }

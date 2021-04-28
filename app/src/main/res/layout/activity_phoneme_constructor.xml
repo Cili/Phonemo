@@ -24,7 +24,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/capriola"
-            android:text="@string/WordCreateStr" />
+            android:text="@string/WordCreateStr"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/SocialMediaTab"
@@ -33,7 +34,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/capriola"
-            android:text="@string/SocialMediaStr" />
+            android:text="@string/SocialMediaStr"
+            android:textColor="@color/white" />
 
         <Button
             android:id="@+id/PersonalLibraryTab"
@@ -42,7 +44,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/capriola"
-            android:text="@string/PersonalLibraryStr" />
+            android:text="@string/PersonalLibraryStr"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <Button
@@ -54,6 +57,7 @@
         android:fontFamily="@font/capriola"
         android:onClick="doneButtonOnClick"
         android:text="@string/DoneButtonStr"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -107,7 +111,9 @@
                 android:onClick="onClick"
                 android:outlineProvider="background"
                 android:text="@string/bButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textColorLink="#FFFFFF" />
 
             <Button
                 android:id="@+id/Phoneme02"
@@ -120,7 +126,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/dButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme03"
@@ -133,7 +140,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/fButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme04"
@@ -148,7 +156,8 @@
                 android:minLines="2"
                 android:onClick="onClick"
                 android:text="@string/gButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <ImageButton
                 android:id="@+id/Backspace"
@@ -179,7 +188,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/hButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme06"
@@ -191,7 +201,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/d3ButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme07"
@@ -204,7 +215,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="background"
                 android:text="@string/kButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme08"
@@ -217,7 +229,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/lButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme09"
@@ -229,7 +242,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/mButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme10"
@@ -241,7 +255,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/nButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme11"
@@ -254,7 +269,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/pButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
@@ -272,7 +288,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/rButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme13"
@@ -284,7 +301,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/sButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme14"
@@ -297,7 +315,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="background"
                 android:text="@string/tButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme15"
@@ -310,7 +329,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/vButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme16"
@@ -322,7 +342,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/wButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme17"
@@ -334,7 +355,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/zButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme18"
@@ -347,6 +369,7 @@
                 android:onClick="onClick"
                 android:text="@string/ʒButtonStr"
                 android:textAllCaps="false"
+                android:textColor="@color/white"
                 android:textSize="14sp" />
         </TableRow>
 
@@ -365,7 +388,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/tʃButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme20"
@@ -377,7 +401,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/ʃButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme21"
@@ -390,7 +415,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="background"
                 android:text="@string/θButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme22"
@@ -403,7 +429,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/ðButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme23"
@@ -415,7 +442,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/ŋButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme24"
@@ -427,7 +455,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/jButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme25"
@@ -439,7 +468,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/æButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
@@ -457,7 +487,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/eɪButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme27"
@@ -469,7 +500,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/eButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme28"
@@ -482,7 +514,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="background"
                 android:text="@string/icolonButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme29"
@@ -495,7 +528,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/ɪButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme30"
@@ -507,7 +541,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/aɪButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme31"
@@ -519,7 +554,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/ɒButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme32"
@@ -531,7 +567,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/oʊButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
         </TableRow>
 
         <TableRow
@@ -549,7 +586,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/ʊButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme34"
@@ -561,7 +599,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/ʌButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme35"
@@ -574,7 +613,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="background"
                 android:text="@string/ucolonButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme36"
@@ -587,7 +627,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/ɔɪButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme37"
@@ -599,7 +640,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/aʊButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme38"
@@ -611,7 +653,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/əButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme39"
@@ -623,7 +666,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/eəʳButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
         </TableRow>
 
@@ -653,7 +697,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/ɑcolonButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme41"
@@ -666,7 +711,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="background"
                 android:text="@string/ɜʳButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme42"
@@ -679,7 +725,8 @@
                 android:onClick="onClick"
                 android:outlineProvider="paddedBounds"
                 android:text="@string/ɔcolonButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme43"
@@ -691,7 +738,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/ɪəʳButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/Phoneme44"
@@ -703,7 +751,8 @@
                 android:fontFamily="@font/capriola"
                 android:onClick="onClick"
                 android:text="@string/ʊəʳButtonStr"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
 
             <ImageButton
                 android:id="@+id/SpeakerButton"
