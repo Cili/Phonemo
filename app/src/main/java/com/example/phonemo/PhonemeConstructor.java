@@ -99,7 +99,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
 
         AudioManager audioManager = (AudioManager) getSystemService(this.AUDIO_SERVICE);
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 20, 0);
-
     }
 
     /**
@@ -391,7 +390,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
         }
 
         //mediaPlayer.start();
-
     }
 
     /**
@@ -453,8 +451,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
             }, 1, TimeUnit.SECONDS);*//*
 
         }*/
-
-
     }
 
     /**
@@ -484,7 +480,5 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                     .show();
                 //intent.putExtra("phonemeWord",wordList);
         //mediaPlayer.release();
-
     }
-
 }
