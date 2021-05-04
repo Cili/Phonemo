@@ -20,6 +20,7 @@ public class GraphemeConstructor extends AppCompatActivity {
 
     private ArrayList<String> phonemeList;
     private String[] graphemes;
+    private int index = 0;
     private Button button01, button02, button03, button04,button05, button06, button07, button08, button09, button10, button11;
 
     @Override
@@ -51,17 +52,21 @@ public class GraphemeConstructor extends AppCompatActivity {
         button10 = findViewById(R.id.Grapheme10);
         button11 = findViewById(R.id.Grapheme11);
 
-        final Controller aController = (Controller) getApplicationContext();
+        displayGraphemes();
 
+        graphemes = new String[phonemeList.size()];
 
-
-        graphemes = aController.getMatchingGraphemes(phonemeList.get(0));
-
-        displayGraphemes(graphemes);
+        for (int i = 0; i<graphemes.length; i++){
+            graphemes[i] = " ";
+        }
 
     }
 
-    public void displayGraphemes(String[] matchingGraphemes){
+    public void displayGraphemes(){
+        final Controller aController = (Controller) getApplicationContext();
+
+        String[] matchingGraphemes = aController.getMatchingGraphemes(phonemeList.get(index));
+
         button01.setText(matchingGraphemes[0]);
         button02.setText(matchingGraphemes[1]);
         button03.setText(matchingGraphemes[2]);
@@ -74,5 +79,39 @@ public class GraphemeConstructor extends AppCompatActivity {
         button10.setText(matchingGraphemes[9]);
         button11.setText(matchingGraphemes[10]);
 
+    }
+
+    /**
+     * Moves the cursor to the left
+     * @param v the left arrow button
+     */
+    public void leftArrowOnClick(View v) {
+        if (index != 0)
+            index--;
+        displayGraphemes();
+
+    }
+
+    /**
+     * Moves the cursor to the right
+     * @param v the right arrow button
+     */
+    public void rightArrowOnClick(View v) {
+        if (index <= phonemeList.size())
+            index++;
+        displayGraphemes();
+    }
+
+    public void onGraphemeClick(View v) {
+        Button b = findViewById(v.getId());
+        String chosenGrapheme = b.getText().toString();
+        graphemes[index] = chosenGrapheme;
+        TextView noname = findViewById(R.id.GraphemeDisplay);
+
+        StringBuilder englishWord = new StringBuilder();
+        for (String str : graphemes) {
+            englishWord.append(str);
+        }
+        noname.setText(englishWord.toString());
     }
 }
