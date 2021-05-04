@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +23,9 @@ public class GraphemeConstructor extends AppCompatActivity {
     private ArrayList<String> phonemeList;
     private String[] graphemes;
     private int index = 0;
+    private boolean firstClick = true;
     private Button button01, button02, button03, button04,button05, button06, button07, button08, button09, button10, button11;
+    private Button b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +61,14 @@ public class GraphemeConstructor extends AppCompatActivity {
         graphemes = new String[phonemeList.size()];
 
         for (int i = 0; i<graphemes.length; i++){
-            graphemes[i] = " ";
+            graphemes[i] = "_ ";
         }
 
     }
 
+    /**
+     * Displays the grapheme string that the user builds
+     */
     public void displayGraphemes(){
         final Controller aController = (Controller) getApplicationContext();
 
@@ -86,8 +93,16 @@ public class GraphemeConstructor extends AppCompatActivity {
      * @param v the left arrow button
      */
     public void leftArrowOnClick(View v) {
-        if (index != 0)
+        if (index <= 0){
+            Snackbar.make(findViewById(v.getId()), R.string.tooSmallIndexError,
+                    Snackbar.LENGTH_SHORT)
+                    .show();
+        }
+        else{
             index--;
+        }
+
+        b.setBackgroundColor(getResources().getColor(R.color.phonemared));
         displayGraphemes();
 
     }
@@ -97,13 +112,33 @@ public class GraphemeConstructor extends AppCompatActivity {
      * @param v the right arrow button
      */
     public void rightArrowOnClick(View v) {
-        if (index <= phonemeList.size())
+        if (index == graphemes.length-1){
+            Snackbar.make(findViewById(v.getId()), R.string.tooLargeIndexError,
+                    Snackbar.LENGTH_SHORT)
+                    .show();
+        }
+        else{
             index++;
+        }
+
+        b.setBackgroundColor(getResources().getColor(R.color.phonemared));
         displayGraphemes();
+
     }
 
+    /**
+     * Allows the user to select a grapheme that corresponds with the phoneme they chose at a specified index
+     * @param v the grapheme button
+     */
     public void onGraphemeClick(View v) {
-        Button b = findViewById(v.getId());
+        if(firstClick)
+            firstClick = false;
+        else
+            b.setBackgroundColor(getResources().getColor(R.color.phonemared));
+
+        b = findViewById(v.getId());
+        b.setBackgroundColor(getResources().getColor(R.color.buttonhighlight));
+
         String chosenGrapheme = b.getText().toString();
         graphemes[index] = chosenGrapheme;
         TextView noname = findViewById(R.id.GraphemeDisplay);
@@ -113,5 +148,38 @@ public class GraphemeConstructor extends AppCompatActivity {
             englishWord.append(str);
         }
         noname.setText(englishWord.toString());
+    }
+
+    /**
+     * Starts the library activity, creating a new word with the grapheme string
+     * @param v the done button
+     */
+    public void doneButtonOnClick(View v){
+        Intent intent = new Intent(this, Library.class);
+        intent.putExtra("word", graphemes);
+
+        boolean empty = false;
+
+        for (String s : graphemes){
+            if (s.equalsIgnoreCase("_ ")){
+                empty=true;
+            }
+            else {
+                empty=false;
+            }
+        }
+
+        if (empty) {
+            Snackbar.make(findViewById(v.getId()), R.string.noGraphemeError,
+                    Snackbar.LENGTH_SHORT)
+                    .show();
+
+        }
+        else{
+            startActivity(intent);
+        }
+
+
+
     }
 }

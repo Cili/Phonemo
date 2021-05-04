@@ -11,11 +11,18 @@ public class GraphemeClass {
     String phonemeSymbol;
     String[] graphemeSymbols;
 
+    /**
+     * Constructs an object of the grapheme class with a blank phoneme and grapheme array
+     */
     public GraphemeClass(){
         phonemeSymbol="";
         graphemeSymbols = new String[11];
     }
 
+    /**
+     * Constructs an object with a phoneme and grapheme string from a given array
+     * @param symbols the given array containing a phoneme at index 0 and graphemes at indexes 1-11
+     */
     public GraphemeClass(String[] symbols){
         phonemeSymbol=symbols[0];
 
@@ -27,10 +34,18 @@ public class GraphemeClass {
 
     }
 
+    /**
+     * Returns the grapheme string
+     * @return
+     */
     public String[] getGraphemes() {
         return graphemeSymbols;
     }
 
+    /**
+     * Returns the phoneme symbols
+     * @return
+     */
     public String getSymbol() {
         return phonemeSymbol;
     }

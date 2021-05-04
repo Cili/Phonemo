@@ -4,14 +4,26 @@ import android.app.Application;
 
 import java.util.ArrayList;
 
+/**
+ * A controller class for the app that manages the graphemes
+ */
 public class Controller extends Application {
 
     ArrayList<GraphemeClass> graphemes = new ArrayList<GraphemeClass>();
 
+    /**
+     * Returns the grapheme list
+     * @return
+     */
     public ArrayList<GraphemeClass> getGraphemes(){
         return graphemes;
     }
 
+    /**
+     * Returns the graphemes
+     * @param place
+     * @return
+     */
     public GraphemeClass getGraphemesAtPlace(int place){
         return graphemes.get(place);
     }

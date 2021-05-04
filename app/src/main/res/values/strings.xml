@@ -74,6 +74,9 @@
     <string name="startButtonStr">START</string>
     <string name="englishWordTitleSTR">Your english spelling is: </string>
     <string name="noPhonemeError">Please enter at least one phoneme to move on.</string>
+    <string name="noGraphemeError">Please complete the word to move on.</string>
+    <string name="tooSmallIndexError">You are at the end of the word, select a grapheme or move right</string>
+    <string name="tooLargeIndexError">You are at the end of the word, select a grapheme or move left</string>
     <string name="CheckDescriptionStr">check button for grapheme</string>
 
 

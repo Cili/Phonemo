@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.AudioAttributes;
 import android.media.AudioManager;
 //import android.media.MediaPlayer;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
@@ -25,14 +26,11 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     private String symbol = "";
     private ArrayList<String> wordList = new ArrayList<>();
     private ArrayList<Integer> soundList = new ArrayList<>();
+    private ArrayList<MediaPlayer> mediaList = new ArrayList<>();
     private int empty = 0;
     private int index = 0;
     private Button b;
-    //private MediaPlayer mediaPlayer;
-    private SoundPool soundPool;
-    private int sound01, sound02, sound03, sound04, sound05, sound06, sound07, sound08, sound09, sound10, sound11, sound12, sound13, sound14, sound15, sound16, sound17, sound18, sound19, sound20, sound21, sound22, sound23, sound24, sound25, sound26, sound27, sound28, sound29, sound30, sound31, sound32, sound33, sound34, sound35, sound36, sound37, sound38, sound39, sound40, sound41, sound42, sound43, sound44;
-    private int currentSound;
-    private final ScheduledExecutorService delay = Executors.newScheduledThreadPool(1);
+    private MediaPlayer mediaPlayer;
     private boolean firstClick = true;
 
     /**
@@ -44,58 +42,95 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phoneme_constructor);
 
-        //trying to use sound player
-        AudioAttributes audioAttributes = new AudioAttributes.Builder()
-                .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
-                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                .build();
+        Button phoneme01 = findViewById(R.id.Phoneme01);
+        Button phoneme02 = findViewById(R.id.Phoneme02);
+        Button phoneme03 = findViewById(R.id.Phoneme03);
+        Button phoneme04 = findViewById(R.id.Phoneme04);
+        Button phoneme05 = findViewById(R.id.Phoneme05);
+        Button phoneme06 = findViewById(R.id.Phoneme06);
+        Button phoneme07 = findViewById(R.id.Phoneme07);
+        Button phoneme08 = findViewById(R.id.Phoneme08);
+        Button phoneme09 = findViewById(R.id.Phoneme09);
+        Button phoneme10 = findViewById(R.id.Phoneme10);
+        Button phoneme11 = findViewById(R.id.Phoneme11);
+        Button phoneme12 = findViewById(R.id.Phoneme12);
+        Button phoneme13 = findViewById(R.id.Phoneme13);
+        Button phoneme14 = findViewById(R.id.Phoneme14);
+        Button phoneme15 = findViewById(R.id.Phoneme15);
+        Button phoneme16 = findViewById(R.id.Phoneme16);
+        Button phoneme17 = findViewById(R.id.Phoneme17);
+        Button phoneme18 = findViewById(R.id.Phoneme18);
+        Button phoneme19 = findViewById(R.id.Phoneme19);
+        Button phoneme20 = findViewById(R.id.Phoneme20);
+        Button phoneme21 = findViewById(R.id.Phoneme21);
+        Button phoneme22 = findViewById(R.id.Phoneme22);
+        Button phoneme23 = findViewById(R.id.Phoneme23);
+        Button phoneme24 = findViewById(R.id.Phoneme24);
+        Button phoneme25 = findViewById(R.id.Phoneme25);
+        Button phoneme26 = findViewById(R.id.Phoneme26);
+        Button phoneme27 = findViewById(R.id.Phoneme27);
+        Button phoneme28 = findViewById(R.id.Phoneme28);
+        Button phoneme29 = findViewById(R.id.Phoneme29);
+        Button phoneme30 = findViewById(R.id.Phoneme30);
+        Button phoneme31 = findViewById(R.id.Phoneme31);
+        Button phoneme32 = findViewById(R.id.Phoneme32);
+        Button phoneme33 = findViewById(R.id.Phoneme33);
+        Button phoneme34 = findViewById(R.id.Phoneme34);
+        Button phoneme35 = findViewById(R.id.Phoneme35);
+        Button phoneme36 = findViewById(R.id.Phoneme36);
+        Button phoneme37 = findViewById(R.id.Phoneme37);
+        Button phoneme38 = findViewById(R.id.Phoneme38);
+        Button phoneme39 = findViewById(R.id.Phoneme39);
+        Button phoneme40 = findViewById(R.id.Phoneme40);
+        Button phoneme41 = findViewById(R.id.Phoneme41);
+        Button phoneme42 = findViewById(R.id.Phoneme42);
+        Button phoneme43 = findViewById(R.id.Phoneme43);
+        Button phoneme44 = findViewById(R.id.Phoneme44);
 
-        soundPool = new SoundPool.Builder().setMaxStreams(50).setAudioAttributes(audioAttributes).build();
-
-        sound01 = soundPool.load(this, R.raw.phonemeaudio01,1);
-        sound02 = soundPool.load(this, R.raw.phonemeaudio02,1);
-        sound03 = soundPool.load(this, R.raw.phonemeaudio03,1);
-        sound04 = soundPool.load(this, R.raw.phonemeaudio04,1);
-        sound05 = soundPool.load(this, R.raw.phonemeaudio05,1);
-        sound06 = soundPool.load(this, R.raw.phonemeaudio06,1);
-        sound07 = soundPool.load(this, R.raw.phonemeaudio07,1);
-        sound08 = soundPool.load(this, R.raw.phonemeaudio08,1);
-        sound09 = soundPool.load(this, R.raw.phonemeaudio09,1);
-        sound10 = soundPool.load(this, R.raw.phonemeaudio10,1);
-        sound11 = soundPool.load(this, R.raw.phonemeaudio11,1);
-        sound12 = soundPool.load(this, R.raw.phonemeaudio12,1);
-        sound13 = soundPool.load(this, R.raw.phonemeaudio13,1);
-        sound14 = soundPool.load(this, R.raw.phonemeaudio14,1);
-        sound15 = soundPool.load(this, R.raw.phonemeaudio15,1);
-        sound16 = soundPool.load(this, R.raw.phonemeaudio16,1);
-        sound17 = soundPool.load(this, R.raw.phonemeaudio17,1);
-        sound18 = soundPool.load(this, R.raw.phonemeaudio18,1);
-        sound19 = soundPool.load(this, R.raw.phonemeaudio19,1);
-        sound20 = soundPool.load(this, R.raw.phonemeaudio20,1);
-        sound21 = soundPool.load(this, R.raw.phonemeaudio21,1);
-        sound22 = soundPool.load(this, R.raw.phonemeaudio22,1);
-        sound23 = soundPool.load(this, R.raw.phonemeaudio23,1);
-        sound24 = soundPool.load(this, R.raw.phonemeaudio24,1);
-        sound25 = soundPool.load(this, R.raw.phonemeaudio25,1);
-        sound26 = soundPool.load(this, R.raw.phonemeaudio26,1);
-        sound27 = soundPool.load(this, R.raw.phonemeaudio27,1);
-        sound28 = soundPool.load(this, R.raw.phonemeaudio28,1);
-        sound29 = soundPool.load(this, R.raw.phonemeaudio29,1);
-        sound30 = soundPool.load(this, R.raw.phonemeaudio30,1);
-        sound31 = soundPool.load(this, R.raw.phonemeaudio31,1);
-        sound32 = soundPool.load(this, R.raw.phonemeaudio32,1);
-        sound33 = soundPool.load(this, R.raw.phonemeaudio33,1);
-        sound34 = soundPool.load(this, R.raw.phonemeaudio34,1);
-        sound35 = soundPool.load(this, R.raw.phonemeaudio35,1);
-        sound36 = soundPool.load(this, R.raw.phonemeaudio36,1);
-        sound37 = soundPool.load(this, R.raw.phonemeaudio37,1);
-        sound38 = soundPool.load(this, R.raw.phonemeaudio38,1);
-        sound39 = soundPool.load(this, R.raw.phonemeaudio39,1);
-        sound40 = soundPool.load(this, R.raw.phonemeaudio40,1);
-        sound41 = soundPool.load(this, R.raw.phonemeaudio41,1);
-        sound42 = soundPool.load(this, R.raw.phonemeaudio42,1);
-        sound43 = soundPool.load(this, R.raw.phonemeaudio43,1);
-        sound44 = soundPool.load(this, R.raw.phonemeaudio44,1);
+        phoneme01.setOnClickListener(this);
+        phoneme02.setOnClickListener(this);
+        phoneme03.setOnClickListener(this);
+        phoneme04.setOnClickListener(this);
+        phoneme05.setOnClickListener(this);
+        phoneme06.setOnClickListener(this);
+        phoneme07.setOnClickListener(this);
+        phoneme08.setOnClickListener(this);
+        phoneme09.setOnClickListener(this);
+        phoneme10.setOnClickListener(this);
+        phoneme11.setOnClickListener(this);
+        phoneme12.setOnClickListener(this);
+        phoneme13.setOnClickListener(this);
+        phoneme14.setOnClickListener(this);
+        phoneme15.setOnClickListener(this);
+        phoneme16.setOnClickListener(this);
+        phoneme17.setOnClickListener(this);
+        phoneme18.setOnClickListener(this);
+        phoneme19.setOnClickListener(this);
+        phoneme20.setOnClickListener(this);
+        phoneme21.setOnClickListener(this);
+        phoneme22.setOnClickListener(this);
+        phoneme23.setOnClickListener(this);
+        phoneme24.setOnClickListener(this);
+        phoneme25.setOnClickListener(this);
+        phoneme26.setOnClickListener(this);
+        phoneme27.setOnClickListener(this);
+        phoneme28.setOnClickListener(this);
+        phoneme29.setOnClickListener(this);
+        phoneme30.setOnClickListener(this);
+        phoneme31.setOnClickListener(this);
+        phoneme32.setOnClickListener(this);
+        phoneme33.setOnClickListener(this);
+        phoneme34.setOnClickListener(this);
+        phoneme35.setOnClickListener(this);
+        phoneme36.setOnClickListener(this);
+        phoneme37.setOnClickListener(this);
+        phoneme38.setOnClickListener(this);
+        phoneme39.setOnClickListener(this);
+        phoneme40.setOnClickListener(this);
+        phoneme41.setOnClickListener(this);
+        phoneme42.setOnClickListener(this);
+        phoneme43.setOnClickListener(this);
+        phoneme44.setOnClickListener(this);
 
         AudioManager audioManager = (AudioManager) getSystemService(this.AUDIO_SERVICE);
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 20, 0);
@@ -114,282 +149,190 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
         b = findViewById(v.getId());
         symbol = b.getText().toString().substring(0, 3).trim();
         b.setBackgroundColor(getResources().getColor(R.color.buttonhighlight));
-        /*String phonemeId = (v.getResources().getResourceName(v.getId()));
-        String phonemeNumber = "sound"+phonemeId.substring(30);
-        currentSound = Integer.parseInt(phonemeNumber);
-        TextView tv = findViewById(R.id.PhonemeDisplay);
-        tv.setText(phonemeNumber);*/
 
         switch (v.getId()) {
             case R.id.Phoneme01:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio01);
-                soundPool.play(sound01, 1, 1, 0, 0, 1);
-                currentSound = sound01;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio01);
                 break;
 
             case R.id.Phoneme02:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio02);
-                soundPool.play(sound02, 1, 1, 0, 0, 1);
-                soundList.add(sound02);
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio02);
                 break;
 
             case R.id.Phoneme03:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio03);
-                soundPool.play(sound03, 1, 1, 0, 0, 1);
-                soundList.add(sound03);
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio03);
                 break;
 
             case R.id.Phoneme04:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio04);
-                soundPool.play(sound04, 1, 1, 0, 0, 1);
-                soundList.add(sound04);
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio04);
                 break;
 
             case R.id.Phoneme05:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio05);
-                soundPool.play(sound05, 1, 1, 0, 0, 1);
-                soundList.add(sound05);
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio05);
                 break;
 
             case R.id.Phoneme06:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio01);
-                soundPool.play(sound06, 1, 1, 0, 0, 1);
-                soundList.add(sound06);
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio06);
                 break;
 
             case R.id.Phoneme07:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio07);
-                soundPool.play(sound07, 1, 1, 0, 0, 1);
-                soundList.add(sound07);
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio07);
                 break;
 
             case R.id.Phoneme08:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio08);
-                soundPool.play(sound08, 1, 1, 0, 0, 1);
-                currentSound = sound08;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio08);
                 break;
 
             case R.id.Phoneme09:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio09);
-                soundPool.play(sound09, 1, 1, 0, 0, 1);
-                currentSound = sound09;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio09);
                 break;
 
             case R.id.Phoneme10:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio10);
-                soundPool.play(sound10, 1, 1, 0, 0, 1);
-                currentSound = sound10;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio10);
                 break;
 
             case R.id.Phoneme11:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio11);
-                soundPool.play(sound11, 1, 1, 0, 0, 1);
-                currentSound = sound11;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio11);
                 break;
 
             case R.id.Phoneme12:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio12);
-                soundPool.play(sound12, 1, 1, 0, 0, 1);
-                currentSound = sound12;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio12);
                 break;
 
             case R.id.Phoneme13:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio13);
-                soundPool.play(sound13, 1, 1, 0, 0, 1);
-                currentSound = sound13;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio13);
                 break;
 
             case R.id.Phoneme14:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio14);
-                soundPool.play(sound14, 1, 1, 0, 0, 1);
-                currentSound = sound14;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio14);
                 break;
 
             case R.id.Phoneme15:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio15);
-                soundPool.play(sound15, 1, 1, 0, 0, 1);
-                currentSound = sound15;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio15);
                 break;
 
             case R.id.Phoneme16:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio16);
-                soundPool.play(sound16, 1, 1, 0, 0, 1);
-                currentSound = sound16;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio16);
                 break;
 
             case R.id.Phoneme17:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio17);
-                soundPool.play(sound17, 1, 1, 0, 0, 1);
-                currentSound = sound17;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio17);
                 break;
 
             case R.id.Phoneme18:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio18);
-                soundPool.play(sound18, 1, 1, 0, 0, 1);
-                currentSound = sound18;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio18);
                 break;
 
             case R.id.Phoneme19:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio19);
-                soundPool.play(sound19, 1, 1, 0, 0, 1);
-                currentSound = sound19;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio19);
                 break;
 
             case R.id.Phoneme20:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio20);
-                soundPool.play(sound20, 1, 1, 0, 0, 1);
-                currentSound = sound20;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio20);
                 break;
 
             case R.id.Phoneme21:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio21);
-                soundPool.play(sound21, 1, 1, 0, 0, 1);
-                currentSound = sound21;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio21);
                 break;
 
             case R.id.Phoneme22:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio22);
-                soundPool.play(sound22, 1, 1, 0, 0, 1);
-                currentSound = sound22;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio22);
                 break;
 
             case R.id.Phoneme23:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio23);
-                soundPool.play(sound23, 1, 1, 0, 0, 1);
-                currentSound = sound23;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio23);
                 break;
 
             case R.id.Phoneme24:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio24);
-                soundPool.play(sound24, 1, 1, 0, 0, 1);
-                currentSound = sound24;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio24);
                 break;
 
             case R.id.Phoneme25:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio25);
-                soundPool.play(sound25, 1, 1, 0, 0, 1);
-                currentSound = sound25;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio25);
                 break;
 
             case R.id.Phoneme26:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio26);
-                soundPool.play(sound26, 1, 1, 0, 0, 1);
-                currentSound = sound26;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio26);
                 break;
 
             case R.id.Phoneme27:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio27);
-                soundPool.play(sound27, 1, 1, 0, 0, 1);
-                currentSound = sound27;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio27);
                 break;
 
             case R.id.Phoneme28:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio28);
-                soundPool.play(sound28, 1, 1, 0, 0, 1);
-                currentSound = sound28;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio28);
                 break;
 
             case R.id.Phoneme29:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio29);
-                soundPool.play(sound29, 1, 1, 0, 0, 1);
-                currentSound = sound29;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio29);
                 break;
 
             case R.id.Phoneme30:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio30);
-                soundPool.play(sound30, 1, 1, 0, 0, 1);
-                currentSound = sound30;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio30);
                 break;
 
             case R.id.Phoneme31:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio31);
-                soundPool.play(sound31, 1, 1, 0, 0, 1);
-                currentSound = sound31;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio31);
                 break;
 
             case R.id.Phoneme32:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio32);
-                soundPool.play(sound32, 1, 1, 0, 0, 1);
-                currentSound = sound32;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio32);
                 break;
 
             case R.id.Phoneme33:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio33);
-                soundPool.play(sound33, 1, 1, 0, 0, 1);
-                currentSound = sound33;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio33);
                 break;
 
             case R.id.Phoneme34:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio34);
-                soundPool.play(sound34, 1, 1, 0, 0, 1);
-                currentSound = sound34;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio34);
                 break;
 
             case R.id.Phoneme35:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio35);
-                soundPool.play(sound35, 1, 1, 0, 0, 1);
-                currentSound = sound35;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio35);
                 break;
 
             case R.id.Phoneme36:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio36);
-                soundPool.play(sound36, 1, 1, 0, 0, 1);
-                currentSound = sound36;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio36);
                 break;
 
             case R.id.Phoneme37:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio37);
-                soundPool.play(sound37, 1, 1, 0, 0, 1);
-                currentSound = sound37;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio37);
                 break;
 
             case R.id.Phoneme38:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio38);
-                soundPool.play(sound38, 1, 1, 0, 0, 1);
-                currentSound = sound38;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio38);
                 break;
 
             case R.id.Phoneme39:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio39);
-                soundPool.play(sound39, 1, 1, 0, 0, 1);
-                currentSound = sound39;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio39);
                 break;
 
             case R.id.Phoneme40:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio40);
-                soundPool.play(sound40, 1, 1, 0, 0, 1);
-                currentSound = sound40;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio40);
                 break;
 
             case R.id.Phoneme41:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio41);
-                soundPool.play(sound41, 1, 1, 0, 0, 1);
-                currentSound = sound41;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio41);
                 break;
 
             case R.id.Phoneme42:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio42);
-                soundPool.play(sound42, 1, 1, 0, 0, 1);
-                currentSound = sound42;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio42);
                 break;
 
             case R.id.Phoneme43:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio43);
-                soundPool.play(sound43, 1, 1, 0, 0, 1);
-                currentSound = sound43;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio43);
                 break;
 
             case R.id.Phoneme44:
-                //mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio44);
-                soundPool.play(sound44, 1, 1, 0, 0, 1);
-                currentSound = sound44;
+                mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio44);
                 break;
 
             default:
-                break;
-        }
+             break;
+    }
 
-        //mediaPlayer.start();
+        mediaPlayer.start();
+
     }
 
     /**
@@ -397,8 +340,8 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the add button
      */
     public void addButtonOnClick(View v) {
-        wordList.add(index++, symbol); //Fun Fact: you can increment and use index at the same time
-        soundList.add(currentSound);
+        wordList.add(index++, symbol);
+        mediaList.add(mediaPlayer);
         constructWord();
         empty++;
     }
@@ -427,7 +370,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      */
     public void backspaceOnClick(View v) {
         if (wordList.size() > 0 && index>0) {
-            wordList.remove(--index); //Will first decrement index THEN run the deleteCharAt function. At least, it should do that...
+            wordList.remove(--index);
             soundList.remove(index);
             constructWord();
             empty--;
@@ -439,6 +382,18 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the speaker button
      */
     public void speakerOnClick(View v) throws InterruptedException {
+        /*for(int i = 0; i<mediaList.size(); i++){
+            mediaList.get(i).setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mediaPlayer) {
+                    mediaPlayer.start();
+                    mediaPlayer.stop();
+
+
+                }
+            });
+        }*/
+
         /*for(Integer m: soundList) {
             soundPool.notify();
             soundPool.play(m, 1, 1, 0, 0, 1);
@@ -452,6 +407,26 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
 
         }*/
     }
+
+    /*public void playSounds (){
+
+        int placeholder = 0;
+
+
+        mediaList.get(placeholder).setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+
+                int place = mediaList.lastIndexOf();
+
+                if(placeholder<mediaList.size()){
+                    placeholder++
+                    mediaList.get(placeholder++).start();
+                }
+
+            }
+        });
+    }*/
 
     /**
      * Displays the phonemic list in the text view box
