@@ -1,12 +1,11 @@
 package com.example.phonemo;
 
 import android.content.Intent;
-import android.media.AudioAttributes;
 import android.media.AudioManager;
 //import android.media.MediaPlayer;
 import android.media.MediaPlayer;
-import android.media.SoundPool;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,18 +16,16 @@ import androidx.appcompat.app.AppCompatActivity;
 //import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class PhonemeConstructor extends AppCompatActivity implements View.OnClickListener {
 
     private String symbol = "";
     private ArrayList<String> wordList = new ArrayList<>();
     private ArrayList<Integer> soundList = new ArrayList<>();
-    private ArrayList<MediaPlayer> mediaList = new ArrayList<>();
+    private ArrayList<Integer> mediaList = new ArrayList<Integer>();
     private int empty = 0;
     private int index = 0;
+    private int mediaInt;
     private Button b;
     private MediaPlayer mediaPlayer;
     private boolean firstClick = true;
@@ -153,178 +150,222 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
         switch (v.getId()) {
             case R.id.Phoneme01:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio01);
+                mediaInt = R.raw.phonemeaudio01;
                 break;
 
             case R.id.Phoneme02:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio02);
+                mediaInt = R.raw.phonemeaudio02;
                 break;
 
             case R.id.Phoneme03:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio03);
+                mediaInt = R.raw.phonemeaudio03;
                 break;
 
             case R.id.Phoneme04:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio04);
+                mediaInt = R.raw.phonemeaudio04;
                 break;
 
             case R.id.Phoneme05:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio05);
+                mediaInt = R.raw.phonemeaudio05;
                 break;
 
             case R.id.Phoneme06:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio06);
+                mediaInt = R.raw.phonemeaudio06;
                 break;
 
             case R.id.Phoneme07:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio07);
+                mediaInt = R.raw.phonemeaudio07;
                 break;
 
             case R.id.Phoneme08:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio08);
+                mediaInt = R.raw.phonemeaudio08;
                 break;
 
             case R.id.Phoneme09:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio09);
+                mediaInt = R.raw.phonemeaudio09;
                 break;
 
             case R.id.Phoneme10:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio10);
+                mediaInt = R.raw.phonemeaudio10;
                 break;
 
             case R.id.Phoneme11:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio11);
+                mediaInt = R.raw.phonemeaudio11;
                 break;
 
             case R.id.Phoneme12:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio12);
+                mediaInt = R.raw.phonemeaudio12;
                 break;
 
             case R.id.Phoneme13:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio13);
+                mediaInt = R.raw.phonemeaudio13;
                 break;
 
             case R.id.Phoneme14:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio14);
+                mediaInt = R.raw.phonemeaudio14;
                 break;
 
             case R.id.Phoneme15:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio15);
+                mediaInt = R.raw.phonemeaudio15;
                 break;
 
             case R.id.Phoneme16:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio16);
+                mediaInt = R.raw.phonemeaudio16;
                 break;
 
             case R.id.Phoneme17:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio17);
+                mediaInt = R.raw.phonemeaudio17;
                 break;
 
             case R.id.Phoneme18:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio18);
+                mediaInt = R.raw.phonemeaudio18;
                 break;
 
             case R.id.Phoneme19:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio19);
+                mediaInt = R.raw.phonemeaudio19;
                 break;
 
             case R.id.Phoneme20:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio20);
+                mediaInt = R.raw.phonemeaudio20;
                 break;
 
             case R.id.Phoneme21:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio21);
+                mediaInt = R.raw.phonemeaudio21;
                 break;
 
             case R.id.Phoneme22:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio22);
+                mediaInt = R.raw.phonemeaudio22;
                 break;
 
             case R.id.Phoneme23:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio23);
+                mediaInt = R.raw.phonemeaudio23;
                 break;
 
             case R.id.Phoneme24:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio24);
+                mediaInt = R.raw.phonemeaudio24;
                 break;
 
             case R.id.Phoneme25:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio25);
+                mediaInt = R.raw.phonemeaudio25;
                 break;
 
             case R.id.Phoneme26:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio26);
+                mediaInt = R.raw.phonemeaudio26;
                 break;
 
             case R.id.Phoneme27:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio27);
+                mediaInt = R.raw.phonemeaudio27;
                 break;
 
             case R.id.Phoneme28:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio28);
+                mediaInt = R.raw.phonemeaudio28;
                 break;
 
             case R.id.Phoneme29:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio29);
+                mediaInt = R.raw.phonemeaudio29;
                 break;
 
             case R.id.Phoneme30:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio30);
+                mediaInt = R.raw.phonemeaudio30;
                 break;
 
             case R.id.Phoneme31:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio31);
+                mediaInt = R.raw.phonemeaudio31;
                 break;
 
             case R.id.Phoneme32:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio32);
+                mediaInt = R.raw.phonemeaudio32;
                 break;
 
             case R.id.Phoneme33:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio33);
+                mediaInt = R.raw.phonemeaudio33;
                 break;
 
             case R.id.Phoneme34:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio34);
+                mediaInt = R.raw.phonemeaudio34;
                 break;
 
             case R.id.Phoneme35:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio35);
+                mediaInt = R.raw.phonemeaudio35;
                 break;
 
             case R.id.Phoneme36:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio36);
+                mediaInt = R.raw.phonemeaudio36;
                 break;
 
             case R.id.Phoneme37:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio37);
+                mediaInt = R.raw.phonemeaudio37;
                 break;
 
             case R.id.Phoneme38:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio38);
+                mediaInt = R.raw.phonemeaudio38;
                 break;
 
             case R.id.Phoneme39:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio39);
+                mediaInt = R.raw.phonemeaudio39;
                 break;
 
             case R.id.Phoneme40:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio40);
+                mediaInt = R.raw.phonemeaudio40;
                 break;
 
             case R.id.Phoneme41:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio41);
+                mediaInt = R.raw.phonemeaudio41;
                 break;
 
             case R.id.Phoneme42:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio42);
+                mediaInt = R.raw.phonemeaudio42;
                 break;
 
             case R.id.Phoneme43:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio43);
+                mediaInt = R.raw.phonemeaudio43;
                 break;
 
             case R.id.Phoneme44:
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio44);
+                mediaInt = R.raw.phonemeaudio44;
                 break;
 
             default:
@@ -332,6 +373,15 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     }
 
         mediaPlayer.start();
+
+        // Free up the resources after sound completion -> this is around line 340:  mediaPlayer.start();
+        mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mediaPlayer.stop();
+                mediaPlayer.release();
+            }
+        });
 
     }
 
@@ -341,7 +391,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      */
     public void addButtonOnClick(View v) {
         wordList.add(index++, symbol);
-        mediaList.add(mediaPlayer);
+        mediaList.add(mediaInt);
         constructWord();
         empty++;
     }
@@ -382,51 +432,30 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the speaker button
      */
     public void speakerOnClick(View v) throws InterruptedException {
-        /*for(int i = 0; i<mediaList.size(); i++){
-            mediaList.get(i).setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mediaPlayer) {
-                    mediaPlayer.start();
-                    mediaPlayer.stop();
 
+        Log.d("PhonemeConstructor", "In speakerOnClick() method");
 
-                }
-            });
-        }*/
-
-        /*for(Integer m: soundList) {
-            soundPool.notify();
-            soundPool.play(m, 1, 1, 0, 0, 1);
-            soundPool.wait(500);
-            *//*delay.schedule(new Runnable() {
-                @Override
-                public void run() {
-                    soundPool.
-                }
-            }, 1, TimeUnit.SECONDS);*//*
-
-        }*/
+        for ( int index = 0; index < mediaList.size(); index++ ) {
+            MediaPlayer mp = MediaPlayer.create( this, mediaList.get(index));
+            mp.start();
+            delay(200000);  // Add a delay - decide what works best
+            mp.stop();
+            //mp.release();
+        }
     }
 
-    /*public void playSounds (){
-
-        int placeholder = 0;
-
-
-        mediaList.get(placeholder).setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-
-                int place = mediaList.lastIndexOf();
-
-                if(placeholder<mediaList.size()){
-                    placeholder++
-                    mediaList.get(placeholder++).start();
-                }
-
-            }
-        });
-    }*/
+    /**
+     *  This is the delay(...) method that will clock a user defined millisecond delay - this can behave like a "pause" between sounds.
+     *
+     */
+    public void delay(long n)
+    {
+        n *= 1000;
+        long startDelay = System.nanoTime();
+        long endDelay = 0;
+        while (endDelay - startDelay < n)
+            endDelay = System.nanoTime();
+    }
 
     /**
      * Displays the phonemic list in the text view box
@@ -453,7 +482,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
             Snackbar.make(findViewById(R.id.DoneButton), R.string.noPhonemeError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-                //intent.putExtra("phonemeWord",wordList);
-        //mediaPlayer.release();
+
     }
 }
