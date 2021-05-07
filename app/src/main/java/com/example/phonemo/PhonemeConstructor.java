@@ -367,9 +367,9 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                 mediaPlayer = MediaPlayer.create(this, R.raw.phonemeaudio44);
                 mediaInt = R.raw.phonemeaudio44;
                 break;
-
+                
             default:
-             break;
+                break;
     }
 
         mediaPlayer.start();
@@ -440,7 +440,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
             mp.start();
             delay(200000);  // Add a delay - decide what works best
             mp.stop();
-            //mp.release();
+            mp.release();
         }
     }
 

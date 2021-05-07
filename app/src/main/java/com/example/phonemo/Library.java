@@ -10,7 +10,10 @@ public class Library extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library);
+
+        System.out.print("helloooooooo");
     }
+
 
     //recycler view and cards
 

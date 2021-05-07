@@ -179,7 +179,5 @@ public class GraphemeConstructor extends AppCompatActivity {
             startActivity(intent);
         }
 
-
-
     }
 }
