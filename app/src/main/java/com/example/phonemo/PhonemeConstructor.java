@@ -2,23 +2,17 @@ package com.example.phonemo;
 
 import android.content.Intent;
 import android.media.AudioManager;
-//import android.media.MediaPlayer;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-//import androidx.core.content.ContextCompat;
-
 import java.util.ArrayList;
 
 public class PhonemeConstructor extends AppCompatActivity implements View.OnClickListener {
-
     private String symbol = "";
     private ArrayList<String> wordList = new ArrayList<>();
     private ArrayList<Integer> soundList = new ArrayList<>();
@@ -382,7 +376,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                 mediaPlayer.release();
             }
         });
-
     }
 
     /**
@@ -446,7 +439,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
 
     /**
      *  This is the delay(...) method that will clock a user defined millisecond delay - this can behave like a "pause" between sounds.
-     *
      */
     public void delay(long n)
     {
@@ -482,6 +474,5 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
             Snackbar.make(findViewById(R.id.DoneButton), R.string.noPhonemeError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-
     }
 }

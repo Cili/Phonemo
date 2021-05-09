@@ -11,7 +11,7 @@ public class Library extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library);
 
-        System.out.print("helloooooooo");
+
     }
 
 
