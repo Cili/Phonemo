@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         final Controller aController = (Controller) this.getApplicationContext();
         
         for(GraphemeClass q: aController.getGraphemes())
-            Log.v("Main Activity", "symbols: "+q.getSymbol() +" graphemes: "+ q.getGraphemes()[0]);
+            Log.v("Main Activity", "symbols: " + q.getSymbol() + " graphemes: " + q.getGraphemes()[0]);
     }
 
     private void readPhonemeData() {
