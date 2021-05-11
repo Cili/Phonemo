@@ -2,19 +2,14 @@ package com.example.phonemo;
 
 import android.content.Intent;
 import android.media.AudioManager;
-//import android.media.MediaPlayer;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-//import androidx.core.content.ContextCompat;
-
 import java.util.ArrayList;
 
 public class PhonemeConstructor extends AppCompatActivity implements View.OnClickListener {
@@ -369,8 +364,8 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                 break;
 
             default:
-             break;
-    }
+                break;
+        }
 
         mediaPlayer.start();
 
@@ -382,7 +377,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                 mediaPlayer.release();
             }
         });
-
     }
 
     /**
@@ -401,14 +395,12 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the left arrow button
      */
     public void leftArrowOnClick(View v) {
-        if (index <= 0){
+        if(index <= 0)
             Snackbar.make(findViewById(v.getId()), R.string.pTooSmallIndexError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-        }
-        else{
+        else
             index--;
-        }
     }
 
     /**
@@ -416,15 +408,12 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the right arrow button
      */
     public void rightArrowOnClick(View v) {
-        if (index == symbol.length()-1){
+        if(index == symbol.length() - 1)
             Snackbar.make(findViewById(v.getId()), R.string.pTooLargeIndexError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-        }
-        else{
+        else
             index++;
-        }
-
     }
 
     /**
@@ -432,7 +421,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the backspace button
      */
     public void backspaceOnClick(View v) {
-        if (wordList.size() > 0 && index>0) {
+        if(wordList.size() > 0 && index > 0) {
             wordList.remove(--index);
             mediaList.remove(index);
             constructWord();
@@ -448,12 +437,11 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
 
         Log.d("PhonemeConstructor", "In speakerOnClick() method");
 
-        for ( int index = 0; index < mediaList.size(); index++ ) {
+        for(int index = 0; index < mediaList.size(); index++ ) {
             MediaPlayer mp = MediaPlayer.create( this, mediaList.get(index));
             mp.start();
             delay(200000);  // Add a delay - decide what works best
             mp.stop();
-            //mp.release();
         }
     }
 
@@ -461,8 +449,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      *  This is the delay(...) method that will clock a user defined millisecond delay - this can behave like a "pause" between sounds.
      *
      */
-    public void delay(long n)
-    {
+    public void delay(long n) {
         n *= 1000;
         long startDelay = System.nanoTime();
         long endDelay = 0;
@@ -476,9 +463,8 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     public void constructWord() {
         StringBuilder phonemicWord = new StringBuilder();
         TextView noname = findViewById(R.id.PhonemeDisplay);
-        for (String str : wordList) {
+        for (String str : wordList)
             phonemicWord.append(str);
-        }
         noname.setText(phonemicWord.toString());
     }
 
@@ -489,7 +475,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     public void doneButtonOnClick(View v){
         Intent intent = new Intent(this, GraphemeConstructor.class);
         intent.putExtra("phonemeWord", wordList);
-        if (empty>0)
+        if (empty > 0)
             startActivity(intent);
         else
             Snackbar.make(findViewById(R.id.DoneButton), R.string.noPhonemeError,
