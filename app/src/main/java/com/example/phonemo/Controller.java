@@ -1,7 +1,6 @@
 package com.example.phonemo;
 
 import android.app.Application;
-
 import java.util.ArrayList;
 
 /**
@@ -13,9 +12,9 @@ public class Controller extends Application {
 
     /**
      * Returns the grapheme list
-     * @return
+     * @return an arraylist of graphemes
      */
-    public ArrayList<GraphemeClass> getGraphemes(){
+    public ArrayList<GraphemeClass> getGraphemes() {
         return graphemes;
     }
 
@@ -24,7 +23,7 @@ public class Controller extends Application {
      * @param place the location of the graphemes
      * @return the grapheme object
      */
-    public GraphemeClass getGraphemesAtPlace(int place){
+    public GraphemeClass getGraphemesAtPlace(int place) {
         return graphemes.get(place);
     }
 
@@ -41,15 +40,10 @@ public class Controller extends Application {
      * @param match the phoneme symbol to be matched
      * @return a string array of matching graphemes to the phoneme
      */
-    public String[] getMatchingGraphemes(String match){
-        for (int i=0; i<graphemes.size(); i++){
-            if(match.equalsIgnoreCase(graphemes.get(i).getSymbol())){
+    public String[] getMatchingGraphemes(String match) {
+        for (int i = 0; i < graphemes.size(); i++)
+            if(match.equalsIgnoreCase(graphemes.get(i).getSymbol()))
                 return graphemes.get(i).getGraphemes();
-
-            }
-        }
         return null;
-
     }
-
 }
