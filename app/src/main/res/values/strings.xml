@@ -77,7 +77,12 @@
     <string name="noGraphemeError">Please complete the word to move on.</string>
     <string name="tooSmallIndexError">You are at the end of the word, select a grapheme or move right</string>
     <string name="tooLargeIndexError">You are at the end of the word, select a grapheme or move left</string>
+    <string name="pTooSmallIndexError">You are at the end of the word, select a phoneme or move right</string>
+    <string name="pTooLargeIndexError">You are at the end of the word, select a phoneme or move left</string>
     <string name="CheckDescriptionStr">check button for grapheme</string>
+    <string name="comeBackLater">Return later for more content</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

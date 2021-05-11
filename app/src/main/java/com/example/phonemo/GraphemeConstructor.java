@@ -1,13 +1,16 @@
 package com.example.phonemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import com.google.android.material.snackbar.Snackbar;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -36,8 +39,9 @@ public class GraphemeConstructor extends AppCompatActivity {
 
         StringBuilder phonemicWord = new StringBuilder();
         TextView noname = findViewById(R.id.PhonemeDisplay2);
-        for(String str : phonemeList)
+        for (String str : phonemeList) {
             phonemicWord.append(str);
+        }
         noname.setText(phonemicWord.toString());
 
         button01 = findViewById(R.id.Grapheme01);
@@ -56,8 +60,10 @@ public class GraphemeConstructor extends AppCompatActivity {
 
         graphemes = new String[phonemeList.size()];
 
-        for(int i = 0; i<graphemes.length; i++)
+        for (int i = 0; i<graphemes.length; i++){
             graphemes[i] = "_ ";
+        }
+
     }
 
     /**
@@ -87,15 +93,18 @@ public class GraphemeConstructor extends AppCompatActivity {
      * @param v the left arrow button
      */
     public void leftArrowOnClick(View v) {
-        if(index <= 0)
+        if (index <= 0){
             Snackbar.make(findViewById(v.getId()), R.string.tooSmallIndexError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-        else
+        }
+        else{
             index--;
+        }
 
         b.setBackgroundColor(getResources().getColor(R.color.phonemared));
         displayGraphemes();
+
     }
 
     /**
@@ -103,15 +112,18 @@ public class GraphemeConstructor extends AppCompatActivity {
      * @param v the right arrow button
      */
     public void rightArrowOnClick(View v) {
-        if(index == graphemes.length-1)
+        if (index == graphemes.length-1){
             Snackbar.make(findViewById(v.getId()), R.string.tooLargeIndexError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-        else
+        }
+        else{
             index++;
+        }
 
         b.setBackgroundColor(getResources().getColor(R.color.phonemared));
         displayGraphemes();
+
     }
 
     /**
@@ -132,8 +144,9 @@ public class GraphemeConstructor extends AppCompatActivity {
         TextView noname = findViewById(R.id.GraphemeDisplay);
 
         StringBuilder englishWord = new StringBuilder();
-        for(String str : graphemes)
+        for (String str : graphemes) {
             englishWord.append(str);
+        }
         noname.setText(englishWord.toString());
     }
 
@@ -142,23 +155,53 @@ public class GraphemeConstructor extends AppCompatActivity {
      * @param v the done button
      */
     public void doneButtonOnClick(View v){
-        Intent intent = new Intent(this, Library.class);
+        /*Intent intent = new Intent(this, Library.class);
         intent.putExtra("word", graphemes);
 
         boolean empty = false;
 
-        for(String s : graphemes){
-            if(s.equalsIgnoreCase("_ "))
+        for (String s : graphemes){
+            if (s.equalsIgnoreCase("_ ")){
                 empty=true;
-            else
+            }
+            else {
                 empty=false;
+            }
         }
 
-        if(empty)
+        if (empty) {
             Snackbar.make(findViewById(v.getId()), R.string.noGraphemeError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-        else
+
+        }
+        else{
             startActivity(intent);
+        }*/
+
+        boolean empty = false;
+
+        for (String s : graphemes){
+            if (s.equalsIgnoreCase("_ ")){
+                empty=true;
+            }
+            else {
+                empty=false;
+            }
+        }
+
+        if (empty) {
+            Snackbar.make(findViewById(v.getId()), R.string.noGraphemeError,
+                    Snackbar.LENGTH_SHORT)
+                    .show();
+
+        }
+
+        else {
+            Snackbar.make(findViewById(v.getId()), R.string.comeBackLater,
+                    Snackbar.LENGTH_SHORT)
+                    .show();
+        }
+
     }
 }

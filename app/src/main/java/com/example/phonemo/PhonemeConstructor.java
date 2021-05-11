@@ -401,8 +401,14 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the left arrow button
      */
     public void leftArrowOnClick(View v) {
-        if (index != 0)
+        if (index <= 0){
+            Snackbar.make(findViewById(v.getId()), R.string.pTooSmallIndexError,
+                    Snackbar.LENGTH_SHORT)
+                    .show();
+        }
+        else{
             index--;
+        }
     }
 
     /**
@@ -410,8 +416,15 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the right arrow button
      */
     public void rightArrowOnClick(View v) {
-        if (index <= symbol.length())
+        if (index == symbol.length()-1){
+            Snackbar.make(findViewById(v.getId()), R.string.pTooLargeIndexError,
+                    Snackbar.LENGTH_SHORT)
+                    .show();
+        }
+        else{
             index++;
+        }
+
     }
 
     /**
@@ -421,7 +434,7 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     public void backspaceOnClick(View v) {
         if (wordList.size() > 0 && index>0) {
             wordList.remove(--index);
-            soundList.remove(index);
+            mediaList.remove(index);
             constructWord();
             empty--;
         }
