@@ -10,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Phonemo">
+        <activity android:name=".Library"></activity>
         <activity android:name=".GraphemeConstructor" />
         <activity android:name=".MainActivity">
             <intent-filter>

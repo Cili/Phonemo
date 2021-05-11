@@ -4,4 +4,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Library"/>
+    tools:context=".Library">
+
+    <TextView
+        android:id="@+id/phonemeDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="171dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/capriola"
+        android:textAlignment="center"
+        android:textColor="@color/phonemared"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/graphemeDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/capriola"
+        android:textAlignment="center"
+        android:textColor="@color/phonemared"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phonemeDisplay" />
+
+    <TextView
+        android:id="@+id/contextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/capriola"
+        android:text="@string/contextText"
+        android:textAlignment="center"
+        android:textColor="@color/phonemared"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graphemeDisplay" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="491dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:fontFamily="@font/capriola"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="@color/phonemared"
+        android:textSize="20sp"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contextLabel" />
+
+    <LinearLayout
+        android:id="@+id/TabBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/phonemared"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/WordCreationApp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/capriola"
+            android:text="@string/WordCreateStr"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/SocialMediaTab"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/capriola"
+            android:text="@string/SocialMediaStr"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/PersonalLibraryTab"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/capriola"
+            android:text="@string/PersonalLibraryStr"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
