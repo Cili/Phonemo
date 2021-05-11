@@ -1,6 +1,9 @@
 package com.example.phonemo;
 
 import android.app.Application;
+
+import com.example.phonemo.GraphemeClass;
+
 import java.util.ArrayList;
 
 /**
@@ -41,9 +44,11 @@ public class Controller extends Application {
      * @return a string array of matching graphemes to the phoneme
      */
     public String[] getMatchingGraphemes(String match) {
-        for (int i = 0; i < graphemes.size(); i++)
-            if(match.equalsIgnoreCase(graphemes.get(i).getSymbol()))
+        for (int i = 0; i < graphemes.size(); i++) {
+            if (match.equalsIgnoreCase(graphemes.get(i).getSymbol())) {
                 return graphemes.get(i).getGraphemes();
+            }
+        }
         return null;
     }
 }

@@ -155,8 +155,9 @@ public class GraphemeConstructor extends AppCompatActivity {
      * @param v the done button
      */
     public void doneButtonOnClick(View v){
-        /*Intent intent = new Intent(this, Library.class);
+        Intent intent = new Intent(this, Library.class);
         intent.putExtra("word", graphemes);
+        intent.putExtra("phonemes", phonemeList);
 
         boolean empty = false;
 
@@ -177,31 +178,16 @@ public class GraphemeConstructor extends AppCompatActivity {
         }
         else{
             startActivity(intent);
-        }*/
-
-        boolean empty = false;
-
-        for (String s : graphemes){
-            if (s.equalsIgnoreCase("_ ")){
-                empty=true;
-            }
-            else {
-                empty=false;
-            }
         }
 
-        if (empty) {
-            Snackbar.make(findViewById(v.getId()), R.string.noGraphemeError,
-                    Snackbar.LENGTH_SHORT)
-                    .show();
+    }
 
-        }
-
-        else {
-            Snackbar.make(findViewById(v.getId()), R.string.comeBackLater,
-                    Snackbar.LENGTH_SHORT)
-                    .show();
-        }
-
+    /**
+     * Returns the user to the phoneme constructor with a blank word setup
+     * @param v the create button being clicked
+     */
+    public void clickCreateButton(View v){
+        Intent intent = new Intent(this, PhonemeConstructor.class);
+        startActivity(intent);
     }
 }

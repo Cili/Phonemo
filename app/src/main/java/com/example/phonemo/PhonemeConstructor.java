@@ -483,4 +483,13 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
                     .show();
 
     }
+
+    /**
+     * Returns the user to the phoneme constructor with a blank word setup
+     * @param v the create button being clicked
+     */
+    public void clickCreateButton(View v){
+        Intent intent = new Intent(this, PhonemeConstructor.class);
+        startActivity(intent);
+    }
 }

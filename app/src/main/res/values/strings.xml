@@ -84,6 +84,9 @@
     <string name="contextText">Add the context for your word here:</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contextHint">Word Context</string>
+    <string name="phonemeLabel">Your Phonemes:</string>
+    <string name="graphemeLabel">Your Word:</string>
 
 
 </resources>

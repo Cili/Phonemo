@@ -7,11 +7,27 @@
     tools:context=".Library">
 
     <TextView
+        android:id="@+id/phonemeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/capriola"
+        android:text="@string/phonemeLabel"
+        android:textAlignment="center"
+        android:textColor="@color/phonemared"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/phonemeDisplay"
         android:layout_width="match_parent"
         android:layout_height="171dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/capriola"
         android:textAlignment="center"
@@ -20,14 +36,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/phonemeLabel" />
+
+    <TextView
+        android:id="@+id/graphemeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/capriola"
+        android:text="@string/graphemeLabel"
+        android:textAlignment="center"
+        android:textColor="@color/phonemared"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phonemeDisplay" />
 
     <TextView
         android:id="@+id/graphemeDisplay"
         android:layout_width="match_parent"
         android:layout_height="170dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/capriola"
         android:textAlignment="center"
@@ -36,14 +69,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonemeDisplay" />
+        app:layout_constraintTop_toBottomOf="@+id/graphemeLabel" />
 
     <TextView
         android:id="@+id/contextLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/capriola"
         android:text="@string/contextText"
@@ -59,12 +92,13 @@
         android:layout_width="491dp"
         android:layout_height="173dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/capriola"
+        android:hint="@string/contextHint"
         android:inputType="textPersonName"
-        android:textAlignment="center"
         android:textColor="@color/phonemared"
         android:textSize="20sp"
         android:verticalScrollbarPosition="right"
@@ -90,6 +124,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:fontFamily="@font/capriola"
+            android:onClick="clickCreateButton"
             android:text="@string/WordCreateStr"
             android:textColor="@color/white" />
 
