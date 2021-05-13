@@ -140,6 +140,9 @@ public class GraphemeConstructor extends AppCompatActivity {
         b.setBackgroundColor(getResources().getColor(R.color.buttonhighlight));
 
         String chosenGrapheme = b.getText().toString();
+        if (chosenGrapheme.equalsIgnoreCase("")){
+            chosenGrapheme="_";
+        }
         graphemes[index] = chosenGrapheme;
         TextView noname = findViewById(R.id.GraphemeDisplay);
 
@@ -147,6 +150,8 @@ public class GraphemeConstructor extends AppCompatActivity {
         for (String str : graphemes) {
             englishWord.append(str);
         }
+
+
         noname.setText(englishWord.toString());
     }
 
