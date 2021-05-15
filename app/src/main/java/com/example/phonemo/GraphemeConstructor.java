@@ -1,22 +1,15 @@
 package com.example.phonemo;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import com.google.android.material.snackbar.Snackbar;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Arrays;
 
 public class GraphemeConstructor extends AppCompatActivity {
 
@@ -35,7 +28,7 @@ public class GraphemeConstructor extends AppCompatActivity {
         Intent intent = getIntent();
         phonemeList = intent.getStringArrayListExtra("phonemeWord");
 
-        Log.wtf("Constructissue", "check: "+phonemeList.get(0));
+        Log.wtf("Constructissue", "check: "+ phonemeList.get(0));
 
         StringBuilder phonemicWord = new StringBuilder();
         TextView noname = findViewById(R.id.PhonemeDisplay2);
@@ -60,9 +53,7 @@ public class GraphemeConstructor extends AppCompatActivity {
 
         graphemes = new String[phonemeList.size()];
 
-        for (int i = 0; i<graphemes.length; i++){
-            graphemes[i] = "_ ";
-        }
+        Arrays.fill(graphemes, "_ ");
 
     }
 
@@ -131,7 +122,7 @@ public class GraphemeConstructor extends AppCompatActivity {
      * @param v the grapheme button
      */
     public void onGraphemeClick(View v) {
-        if(firstClick)
+        if (firstClick)
             firstClick = false;
         else
             b.setBackgroundColor(getResources().getColor(R.color.phonemared));
@@ -167,12 +158,7 @@ public class GraphemeConstructor extends AppCompatActivity {
         boolean empty = false;
 
         for (String s : graphemes){
-            if (s.equalsIgnoreCase("_ ")){
-                empty=true;
-            }
-            else {
-                empty=false;
-            }
+            empty = s.equalsIgnoreCase("_ ");
         }
 
         if (empty) {
