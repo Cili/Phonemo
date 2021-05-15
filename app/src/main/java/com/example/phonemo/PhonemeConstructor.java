@@ -384,8 +384,9 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
      * @param v the add button
      */
     public void addButtonOnClick(View v) {
+
         wordList.add(index++, symbol);
-        mediaList.add(mediaInt);
+        mediaList.add(index-1, mediaInt);
         constructWord();
         empty++;
     }
