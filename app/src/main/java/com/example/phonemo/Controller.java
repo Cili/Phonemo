@@ -2,8 +2,6 @@ package com.example.phonemo;
 
 import android.app.Application;
 
-import com.example.phonemo.GraphemeClass;
-
 import java.util.ArrayList;
 
 /**
@@ -12,6 +10,7 @@ import java.util.ArrayList;
 public class Controller extends Application {
 
     private ArrayList<GraphemeClass> graphemes = new ArrayList<GraphemeClass>();
+    private ArrayList<Integer> mediaList = new ArrayList<Integer>();
 
     /**
      * Returns the grapheme list
@@ -50,5 +49,15 @@ public class Controller extends Application {
             }
         }
         return null;
+    }
+
+    public void setMediaList(ArrayList<Integer> array){
+        for(Integer i: array){
+            mediaList.add(i);
+        }
+    }
+
+    public ArrayList<Integer> getMediaList(){
+        return mediaList;
     }
 }

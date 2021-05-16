@@ -476,6 +476,10 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     public void doneButtonOnClick(View v){
         Intent intent = new Intent(this, GraphemeConstructor.class);
         intent.putExtra("phonemeWord", wordList);
+
+        final Controller aController = (Controller) getApplicationContext();
+        aController.setMediaList(mediaList);
+
         if (empty > 0)
             startActivity(intent);
         else

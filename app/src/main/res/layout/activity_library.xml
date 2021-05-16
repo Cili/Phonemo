@@ -4,63 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="speakerOnClick"
     tools:context=".Library">
 
     <TextView
-        android:id="@+id/phonemeLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/capriola"
-        android:text="@string/phonemeLabel"
-        android:textAlignment="center"
-        android:textColor="@color/phonemared"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/phonemeDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="171dp"
+        android:layout_width="499dp"
+        android:layout_height="114dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/capriola"
-        android:textAlignment="center"
-        android:textColor="@color/phonemared"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonemeLabel" />
-
-    <TextView
-        android:id="@+id/graphemeLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="50dp"
-        android:fontFamily="@font/capriola"
-        android:text="@string/graphemeLabel"
-        android:textAlignment="center"
-        android:textColor="@color/phonemared"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonemeDisplay" />
-
-    <TextView
-        android:id="@+id/graphemeDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/capriola"
         android:textAlignment="center"
@@ -69,14 +21,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/graphemeLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/phonemeLabel" />
+
+    <ImageButton
+        android:id="@+id/speakerButtonLibrary"
+        android:layout_width="54dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:contentDescription="@string/SpeakerButtonStr"
+        android:onClick="speakerOnClick"
+        app:layout_constraintEnd_toEndOf="@+id/graphemeDisplay"
+        app:layout_constraintTop_toTopOf="@+id/graphemeDisplay"
+        app:srcCompat="@drawable/ic_baseline_campaign_24" />
+
+    <TextView
+        android:id="@+id/phonemeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/capriola"
+        android:text="@string/phonemeLabel"
+        android:textAlignment="center"
+        android:textColor="@color/phonemared"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/contextLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/capriola"
         android:text="@string/contextText"
@@ -84,31 +65,42 @@
         android:textColor="@color/phonemared"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/graphemeDisplay" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="491dp"
-        android:layout_height="173dp"
+    <TextView
+        android:id="@+id/graphemeDisplay"
+        android:layout_width="502dp"
+        android:layout_height="114dp"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="50dp"
-        android:autofillHints=""
-        android:ems="10"
         android:fontFamily="@font/capriola"
-        android:hint="@string/contextHint"
-        android:inputType="textPersonName"
-        android:scrollbars="vertical"
-        android:scrollHorizontally="false"
-        android:singleLine="false"
+        android:textAlignment="center"
         android:textColor="@color/phonemared"
-        android:textSize="20sp"
-        android:verticalScrollbarPosition="right"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contextLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/graphemeLabel" />
+
+    <TextView
+        android:id="@+id/graphemeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/capriola"
+        android:text="@string/graphemeLabel"
+        android:textAlignment="center"
+        android:textColor="@color/phonemared"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phonemeDisplay" />
 
     <LinearLayout
         android:id="@+id/TabBar"
@@ -151,4 +143,28 @@
             android:text="@string/PersonalLibraryStr"
             android:textColor="@color/white" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="492dp"
+        android:layout_height="233dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="50dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/capriola"
+        android:hint="@string/contextHint"
+        android:inputType="textMultiLine"
+
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:textColor="@color/phonemared"
+        android:textSize="20sp"
+        android:verticalScrollbarPosition="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contextLabel" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
