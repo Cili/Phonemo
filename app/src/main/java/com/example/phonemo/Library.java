@@ -20,7 +20,7 @@ public class Library extends AppCompatActivity {
 
     private ArrayList<String> phonemes;
     private String[] graphemes;
-    private ArrayList<Integer> mediaList;
+    private ArrayList<Integer> mediaList = new ArrayList<>();
 
     /**
      * On start the app displays the two variations of the user's word
@@ -50,7 +50,10 @@ public class Library extends AppCompatActivity {
         graphNoname.setText(graphemicWord.toString());
 
         final Controller aController = (Controller) getApplicationContext();
-        mediaList=aController.getMediaList();
+        for (Integer i: aController.getMediaList()){
+            mediaList.add(i);
+            Log.d("Library", "checking for null="+i+" test");
+        }
 
         AudioManager audioManager = (AudioManager) getSystemService(this.AUDIO_SERVICE);
         audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 20, 0);
@@ -62,7 +65,7 @@ public class Library extends AppCompatActivity {
      */
     public void speakerOnClick(View v) throws InterruptedException {
 
-        Log.d("Library", "In speakerOnClick() method, test value="+mediaList.get(0)+"test");
+        Log.d("Library", "In speakerOnClick() method, test value="+mediaList.get(0)+" test");
 
         for(int index = 0; index < mediaList.size(); index++ ) {
             MediaPlayer mp = MediaPlayer.create( this, mediaList.get(index));
@@ -91,5 +94,8 @@ public class Library extends AppCompatActivity {
     public void clickCreateButton(View v) {
         Intent intent = new Intent(this, PhonemeConstructor.class);
         startActivity(intent);
+
+        final Controller aController = (Controller) getApplicationContext();
+        aController.clearMediaList();
     }
 }

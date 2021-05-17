@@ -1,6 +1,7 @@
 package com.example.phonemo;
 
 import android.app.Application;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -58,6 +59,14 @@ public class Controller extends Application {
     public void setMediaList(ArrayList<Integer> array){
         for(Integer i: array){
             mediaList.add(i);
+
+            Log.wtf("Controller", "check: "+ i);
+        }
+        for (int i=0; i<mediaList.size(); i++){
+            if (mediaList.get(i)==null){
+                mediaList.remove(i);
+                i--;
+            }
         }
     }
 
@@ -68,4 +77,15 @@ public class Controller extends Application {
     public ArrayList<Integer> getMediaList(){
         return mediaList;
     }
+
+    /**
+     * Removes the sounds from the media list
+     */
+    public void clearMediaList() {
+        for(int i=0; i<mediaList.size(); i++){
+            mediaList.set(i, null);
+        }
+
+    }
+
 }

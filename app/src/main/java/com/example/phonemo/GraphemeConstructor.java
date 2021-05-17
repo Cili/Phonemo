@@ -32,7 +32,7 @@ public class GraphemeConstructor extends AppCompatActivity {
         Intent intent = getIntent();
         phonemeList = intent.getStringArrayListExtra("phonemeWord");
 
-        Log.wtf("Constructissue", "check: "+ phonemeList.get(0));
+        Log.wtf("GraphemeConstructor", "check: "+ phonemeList.get(0));
 
         StringBuilder phonemicWord = new StringBuilder();
         TextView noname = findViewById(R.id.PhonemeDisplay2);
@@ -146,7 +146,6 @@ public class GraphemeConstructor extends AppCompatActivity {
             englishWord.append(str);
         }
 
-
         noname.setText(englishWord.toString());
     }
 
@@ -169,8 +168,8 @@ public class GraphemeConstructor extends AppCompatActivity {
             Snackbar.make(findViewById(v.getId()), R.string.noGraphemeError,
                     Snackbar.LENGTH_SHORT)
                     .show();
-
         }
+
         else{
             startActivity(intent);
         }
@@ -184,5 +183,9 @@ public class GraphemeConstructor extends AppCompatActivity {
     public void clickCreateButton(View v){
         Intent intent = new Intent(this, PhonemeConstructor.class);
         startActivity(intent);
+
+        final Controller aController = (Controller) getApplicationContext();
+        aController.clearMediaList();
+
     }
 }

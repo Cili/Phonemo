@@ -17,8 +17,6 @@ import java.util.ArrayList;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private ArrayList<GraphemeClass> graphemeArray = new ArrayList<>();
-
     /**
      * This runs when the app loads
      * @param savedInstanceState

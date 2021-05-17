@@ -497,5 +497,8 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
     public void clickCreateButton(View v){
         Intent intent = new Intent(this, PhonemeConstructor.class);
         startActivity(intent);
+
+        final Controller aController = (Controller) getApplicationContext();
+        aController.clearMediaList();
     }
 }

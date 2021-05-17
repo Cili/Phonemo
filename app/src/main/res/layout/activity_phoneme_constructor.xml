@@ -760,7 +760,7 @@
                 android:backgroundTint="@color/phonemared"
                 android:contentDescription="@string/SpeakerButtonStr"
                 android:onClick="speakerOnClick"
-                app:srcCompat="@drawable/ic_baseline_campaign_24" />
+                app:srcCompat="@drawable/ic_baseline_campaign_22" />
 
         </TableRow>
     </TableLayout>
