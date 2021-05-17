@@ -12,11 +12,13 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
+/**
+ * The phoneme constructor displays a keyboard with phoneme symbols that the user can use to build their word
+ */
 public class PhonemeConstructor extends AppCompatActivity implements View.OnClickListener {
 
     private String symbol = "";
     private ArrayList<String> wordList = new ArrayList<>();
-    private ArrayList<Integer> soundList = new ArrayList<>();
     private ArrayList<Integer> mediaList = new ArrayList<Integer>();
     private int empty = 0;
     private int index = 0;
@@ -369,7 +371,6 @@ public class PhonemeConstructor extends AppCompatActivity implements View.OnClic
 
         mediaPlayer.start();
 
-        // Free up the resources after sound completion -> this is around line 340:  mediaPlayer.start();
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mediaPlayer) {

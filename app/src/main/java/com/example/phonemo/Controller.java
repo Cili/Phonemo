@@ -51,12 +51,20 @@ public class Controller extends Application {
         return null;
     }
 
+    /**
+     * Sets the media sound labels for the phoneme word to an array
+     * @param array the media list from the phoneme constructor class
+     */
     public void setMediaList(ArrayList<Integer> array){
         for(Integer i: array){
             mediaList.add(i);
         }
     }
 
+    /**
+     * Returns the list of media sound labels
+     * @return an array list of the sound file names
+     */
     public ArrayList<Integer> getMediaList(){
         return mediaList;
     }

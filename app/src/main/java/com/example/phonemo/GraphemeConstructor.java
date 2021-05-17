@@ -20,6 +20,10 @@ public class GraphemeConstructor extends AppCompatActivity {
     private Button button01, button02, button03, button04,button05, button06, button07, button08, button09, button10, button11;
     private Button b;
 
+    /**
+     * On start the constructor loads the graphemes for the first phoneme and displays the phoneme word
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

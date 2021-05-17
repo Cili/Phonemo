@@ -13,12 +13,19 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/**
+ * The library class displays the user's phoneme word, grapheme word, and their context, alongside the sound that is associated with the word
+ */
 public class Library extends AppCompatActivity {
 
     private ArrayList<String> phonemes;
     private String[] graphemes;
     private ArrayList<Integer> mediaList;
 
+    /**
+     * On start the app displays the two variations of the user's word
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +57,7 @@ public class Library extends AppCompatActivity {
     }
 
     /**
-     * Plays the sounds of all the chosen phonemes
+     * Plays the sounds of the word
      * @param v the speaker button
      */
     public void speakerOnClick(View v) throws InterruptedException {

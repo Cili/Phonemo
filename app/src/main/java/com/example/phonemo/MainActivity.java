@@ -12,16 +12,26 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+/**
+ * The main activity displays upon app load and has a button for the user to start the app
+ */
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<GraphemeClass> graphemeArray = new ArrayList<>();
 
+    /**
+     * This runs when the app loads
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * The raw data is loaded and read by the app
+     */
     @Override
     protected void onStart(){
         super.onStart();
@@ -32,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
             Log.v("Main Activity", "symbols: " + q.getSymbol() + " graphemes: " + q.getGraphemes()[0]);
     }
 
+    /**
+     * The graphemes are put into separate instances of a GraphemeClass based on matching phoneme
+     */
     private void readPhonemeData() {
         InputStream is = getResources().openRawResource(R.raw.phonemicdataaquisition);
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
