@@ -136,7 +136,7 @@ public class GraphemeConstructor extends AppCompatActivity {
 
         String chosenGrapheme = b.getText().toString();
         if (chosenGrapheme.equalsIgnoreCase("")){
-            chosenGrapheme="_";
+            chosenGrapheme="_ ";
         }
         graphemes[index] = chosenGrapheme;
         TextView noname = findViewById(R.id.GraphemeDisplay);
@@ -162,6 +162,9 @@ public class GraphemeConstructor extends AppCompatActivity {
 
         for (String s : graphemes){
             empty = s.equalsIgnoreCase("_ ");
+            if (empty){
+                break;
+            }
         }
 
         if (empty) {

@@ -156,7 +156,7 @@
         android:fontFamily="@font/capriola"
         android:hint="@string/contextHint"
         android:inputType="textMultiLine"
-
+        android:isScrollContainer="true"
         android:scrollbars="vertical"
         android:singleLine="false"
         android:textColor="@color/phonemared"
